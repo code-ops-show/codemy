@@ -10,6 +10,8 @@ import * as styles from './application.sass'
 import Nav from './nav'
 import Footer from './footer'
 
+import favicon from '~/assets/favicon.png'
+
 import Pages from '../pages'
 
 const Application: FunctionComponent<any> = () => {
@@ -25,6 +27,7 @@ const Application: FunctionComponent<any> = () => {
         <title>{t('application.title')}</title>
         <link rel='canonical' href='https://about.codemy.net' />
         <meta name='description' content={t('application.description')} />
+        <link rel='shortcut icon' type='image/png' href={favicon} />
       </Helmet>
       <Nav />
       <Pages route={route} />

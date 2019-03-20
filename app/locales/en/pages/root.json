@@ -1,1 +1,12 @@
-{}
+{
+  "slogan": "We believe anyone can code.",
+  "description": "Learn to code by watching our 'Code Along' video series that show you how to build projects side-by-side someone with real world experience.",
+  "sign_up": {
+    "title": "Register for Free",
+    "description": "Get the most from Codemy.net by registering. We'll keep your information secure.",
+    "email": "Email",
+    "password": "Password",
+    "password_confirm": "Password Confirmation",
+    "create_account": "Create Account"
+  }
+}

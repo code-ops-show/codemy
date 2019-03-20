@@ -1,12 +1,12 @@
 {
   "modules": true,
   "plugins": {
+    "autoprefixer": {
+      "grid": true
+    },
+    "tailwindcss": "./tailwind.js",
     "postcss-modules": {
       "globalModulePaths": ["/styles\/global/"]
-    },
-    "autoprefixer": { 
-      "grid": true 
-    },
-    "tailwindcss": "./tailwind.ts"
+    }
   }
 }
