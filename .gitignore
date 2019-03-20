@@ -3,7 +3,7 @@ node_modules
 dist/*.gz
 dist/*.br
 dist/*.css
-dist/*.index
+dist/*.html
 dist/*.js
 dist/*.svg
 dist/*.png
