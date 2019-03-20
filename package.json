@@ -40,12 +40,14 @@
     "babel-plugin-lodash": "^3.3.4",
     "parcel-bundler": "^1.12.1",
     "parcel-plugin-compress": "^1.0.7",
+    "plugins": "^0.4.2",
     "postcss-modules": "^1.4.1",
     "sass": "^1.17.2",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
     "tailwindcss": "^0.7.4",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "version": "^0.1.2"
   },
   "babel": {
     "plugins": [
