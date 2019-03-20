@@ -1,13 +1,7 @@
 node_modules
 
-dist/*.gz
-dist/*.br
-dist/*.css
-dist/*.html
-dist/*.js
-dist/*.svg
-dist/*.png
-dist/*.map
+dist/*
+!dist/_redirects
 
 .cache
 *.log
