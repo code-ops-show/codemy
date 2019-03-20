@@ -1,0 +1,14 @@
+node_modules
+
+dist/*.gz
+dist/*.br
+dist/*.css
+dist/*.index
+dist/*.js
+dist/*.svg
+dist/*.png
+dist/*.map
+
+.cache
+*.log
+.DS_Store
