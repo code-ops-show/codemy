@@ -20,10 +20,10 @@ const Feature: FunctionComponent<FeatureProps> = (props) => {
   return (
     <div className='my-10 flex'>
       <div className='flex-shrink'>
-        <img src={icons[icon]} width={128} className='bg-white shadow rounded-full border-4 border-white w-32 h-32 align-middle mr-10' /> 
+        <img src={icons[icon]} width={128} className='bg-white shadow rounded-full border-4 border-white w-32 h-32 align-middle mr-5' /> 
       </div>
       <div className='flex-1'>
-        <p className='my-10 text-lg text-grey-darker leading-normal'>{name}</p>
+        <p className='my-5 text-lg text-grey-darker leading-normal'>{name}</p>
       </div>
     </div>
   )

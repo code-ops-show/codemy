@@ -22,7 +22,7 @@ const Criterion: FunctionComponent<CriterionProps> = (props) => {
       <div className='flex-grow'>
         <h3 className='mt-2 text-denim-dark font-normal mb-3'>{name}</h3>
         {tags.map(tag => 
-          <span key={`tag_${tag}`} className={c(styles.tag, 'mr-2')}>
+          <span key={`tag_${tag}`} className={c(styles.tag)}>
             <a href='#' className='text-grey-darker hover:text-denim-light'>{tag}</a>
           </span>)}
       </div>

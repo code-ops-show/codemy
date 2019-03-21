@@ -30,13 +30,13 @@ const Root:FunctionComponent = () => {
       <section id='what' className='pt-10'>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-black'>{t('root.what.heading')}</h2>
-          <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto'>{t('root.what.description')}</p>
+          <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto px-5'>{t('root.what.description')}</p>
         </div>
         <Topics />
       </section>
       <section id='how' className={c(styles.how, 'pt-20')}>
         <div className='container mx-auto'>
-          <h2 className='font-normal text-4xl text-center text-denim-darker'>{t('root.how.heading')}</h2>
+          <h2 className='font-normal text-4xl text-center text-denim-darker mx-5 leading-normal'>{t('root.how.heading')}</h2>
         </div>
         <Features />
       </section>

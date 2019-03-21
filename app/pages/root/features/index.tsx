@@ -19,7 +19,7 @@ const Features: FunctionComponent = () => {
       <div className='flex-1 mt-20 mx-5'>
         <img src={media} />
       </div>
-      <div className='flex-1 mt-10 mx-20'>
+      <div className='flex-1 mt-10 mx-5 sm:mx-5 md:mx-20 lg:mx-20 xl:mx-20'>
         {features.map((feature, index) => <Feature key={`feature_${index}`} {...feature} />)}
 
         <MemberButton />
