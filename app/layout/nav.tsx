@@ -17,7 +17,7 @@ const Nav: FunctionComponent = () => {
         styles.bg
       )}
     >
-      <div className='container mx-auto flex'>
+      <div className='container mx-auto flex z-10'>
         <div className='flex items-center flex-no-shrink text-white ml-5 mr-10'>
           <img src={logo} width={54} height={54} alt='Codemy Logo' />
         </div>
@@ -25,15 +25,23 @@ const Nav: FunctionComponent = () => {
           <div className='text-lg lg:flex-grow'>
             <a
               href='#'
-              className={styles.link}
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
             >
               {t('application.nav.home')}
             </a>
-            <a href='#' className={styles.link}>
+            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
               {t('application.nav.videos')}
             </a>
-            <a href='#' className={styles.link}>
+            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
               {t('application.nav.membership')}
+            </a>
+          </div>
+          <div className='text-lg'>
+            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+              {t('application.nav.login')}
+            </a>
+            <a href='#' className={c(styles.link, 'mr-5 border rounded px-4 py-2 hover:bg-white hover:text-denim')}>
+              {t('application.nav.register')}
             </a>
           </div>
         </div>

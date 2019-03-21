@@ -12,7 +12,7 @@ const Root:FunctionComponent = () => {
 
   return (
     <>
-      <section id='hero' className='py-10 relative'>
+      <section id='hero' className='py-10 relative z-0'>
         <div className={c(styles.bg, 'absolute pin-t pin-b pin-l pin-r z-0')}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>

@@ -4,6 +4,8 @@
   "nav": {
     "home": "Home",
     "videos": "Videos",
-    "membership": "Membership"
+    "membership": "Membership",
+    "login": "Login",
+    "register": "Register"
   }
 }
