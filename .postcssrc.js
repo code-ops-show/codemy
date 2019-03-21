@@ -4,7 +4,7 @@ module.exports = {
     autoprefixer: {
       grid: true
     },
-    tailwindcss: require('./tailwind.ts'),
+    tailwindcss: require('./tailwind.js'),
     'postcss-modules': {
       globalModulePaths: ['/styles/global/']
     }
