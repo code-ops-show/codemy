@@ -68,5 +68,8 @@
         "icon": "watch"
       }
     ]
+  },
+  "recent_uploads": {
+    "heading": "Recently Uploaded Videos"
   }
 }

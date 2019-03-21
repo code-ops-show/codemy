@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import SignUp from './sign_up'
 import Topics from './topics'
 import Features from './features'
+import RecentUploads from './recent_uploads'
 
 import * as styles from './index.sass'
 
@@ -38,6 +39,12 @@ const Root:FunctionComponent = () => {
           <h2 className='font-normal text-4xl text-center text-denim-darker'>{t('root.how.heading')}</h2>
         </div>
         <Features />
+      </section>
+      <section id='recent_uploads' className='pt-20'>
+        <div className='container mx-auto'>
+          <h2 className='font-normal text-4xl text-center text-black'>{t('root.recent_uploads.heading')}</h2>
+        </div>
+        <RecentUploads />
       </section>
     </>
   )
