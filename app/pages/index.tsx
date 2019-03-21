@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
-import { RouteNode } from 'react-router5'
+import { RouteNode, useRouteNode } from 'react-router5'
 import { lazy, Suspense } from 'react'
 
 import { GridLoader } from 'react-spinners'
@@ -45,8 +45,10 @@ const PageComponent: FunctionComponent<RouteProps> = (props: {
   )
 }
 
-export default (props: { route: State }) => (
-  <RouteNode nodeName=''>
-    {({ route }) => <PageComponent route={route} {...props} />}
-  </RouteNode>
-)
+export default (props: { route: State }) => {
+  const { route } = useRouteNode('')
+  
+  return (
+    <PageComponent route={route} {...props} />
+  )
+}

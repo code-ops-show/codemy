@@ -1,10 +1,10 @@
 import * as React from 'react'
 import c from 'classnames'
-import { FunctionComponent, useContext } from 'react'
+import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
 
-import { routeContext } from 'react-router5'
+import { useRoute } from 'react-router5'
 
 import * as styles from './application.sass'
 
@@ -16,10 +16,8 @@ import favicon from '~/assets/favicon.png'
 import Pages from '../pages'
 
 const Application: FunctionComponent<any> = () => {
-  const context = useContext(routeContext)
   const { t } = useTranslation('layout')
-
-  const { route } = context
+  const { route } = useRoute()
 
   return (
     <main id='application' className={c(styles.app, 'font-codemy-sans')}>
