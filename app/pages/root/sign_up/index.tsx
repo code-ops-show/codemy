@@ -31,7 +31,7 @@ const SignUp: FunctionComponent = () => {
         <input className={form.text_entry} type='password' name='password_confirmation' required/>
       </div>
       <div>
-        <button className='w-full p-3 bg-teal text-white rounded'>
+        <button className='w-full p-3 bg-teal text-white rounded shadow'>
           {t('root.sign_up.create_account')}
         </button>
       </div>

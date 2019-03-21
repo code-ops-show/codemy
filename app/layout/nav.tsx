@@ -35,6 +35,9 @@ const Nav: FunctionComponent = () => {
             <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
               {t('application.nav.membership')}
             </a>
+            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+              {t('application.nav.about')}
+            </a>
           </div>
           <div className='text-lg'>
             <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>

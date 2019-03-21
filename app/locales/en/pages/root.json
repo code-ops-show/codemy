@@ -8,5 +8,9 @@
     "password": "Password",
     "password_confirm": "Password Confirmation",
     "create_account": "Create Account"
+  },
+  "topics": {
+    "heading": "What will I Learn?",
+    "description": "Learn to build real production-ready applications. We've divided our video into 3 main criterias."
   }
 }

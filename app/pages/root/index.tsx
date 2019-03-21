@@ -24,6 +24,12 @@ const Root:FunctionComponent = () => {
           </div>
         </div>
       </section>
+      <section id='topics' className='pt-10'>
+        <div className='container mx-auto'>
+          <h2 className='font-normal text-4xl text-center text-black'>{t('root.topics.heading')}</h2>
+          <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto'>{t('root.topics.description')}</p>
+        </div>
+      </section>
     </>
   )
 }
