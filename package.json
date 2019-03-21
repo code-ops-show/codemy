@@ -57,13 +57,6 @@
     ]
   },
   "compress": {
-    "test": ".",
-    "gzip": {
-      "enabled": true,
-      "numiterations": 15,
-      "blocksplitting": true,
-      "blocksplittinglast": false,
-      "blocksplittingmax": 15
-    }
+    "test": "."
   }
 }
