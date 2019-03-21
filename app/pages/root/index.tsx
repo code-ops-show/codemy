@@ -4,6 +4,8 @@ import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import SignUp from './sign_up'
+import Topics from './topics'
+import Features from './features'
 
 import * as styles from './index.sass'
 
@@ -24,11 +26,18 @@ const Root:FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section id='topics' className='pt-10'>
+      <section id='what' className='pt-10'>
         <div className='container mx-auto'>
-          <h2 className='font-normal text-4xl text-center text-black'>{t('root.topics.heading')}</h2>
-          <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto'>{t('root.topics.description')}</p>
+          <h2 className='font-normal text-4xl text-center text-black'>{t('root.what.heading')}</h2>
+          <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto'>{t('root.what.description')}</p>
         </div>
+        <Topics />
+      </section>
+      <section id='how' className={c(styles.how, 'pt-20')}>
+        <div className='container mx-auto'>
+          <h2 className='font-normal text-4xl text-center text-denim-darker'>{t('root.how.heading')}</h2>
+        </div>
+        <Features />
       </section>
     </>
   )

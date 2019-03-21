@@ -9,8 +9,64 @@
     "password_confirm": "Password Confirmation",
     "create_account": "Create Account"
   },
-  "topics": {
+  "call_to_action": "Become a Member",
+  "what": {
     "heading": "What will I Learn?",
-    "description": "Learn to build real production-ready applications. We've divided our video into 3 main criterias."
+    "description": "Learn to build real production-ready applications. We've divided our video into 3 main criterias.",
+    "criteria":[
+      {
+        "name": "Web Application Development",
+        "color": "green",
+        "icon": "fas fa-laptop-code fa-2x",
+        "tags": [
+          "Git",
+          "HTML / CSS",
+          "React",
+          "Ruby",
+          "Elixir",
+          "Rails"
+        ]
+      },
+      {
+        "name": "Development Environment",
+        "color": "blue",
+        "icon": "fas fa-terminal fa-2x",
+        "tags": [
+          "macOS",
+          "Windows",
+          "Linux",
+          "VSCode"
+        ]
+      },
+      {
+        "name": "DevOps",
+        "color": "black",
+        "icon": "fas fa-cogs fa-2x",
+        "tags": [
+          "Terraform",
+          "LXD",
+          "Alpine Linux",
+          "GCP",
+          "AWS"
+        ]
+      }
+    ]
+  },
+  "how": {
+    "heading": "Codemy.net is easy and effective",
+    "features": [
+      {
+      "name": "Up-to-Date, we keep our content fresh and relevant.",
+      "icon": "media"
+      },
+      {
+        "name": "Ask for Help and Give Feedback on our forum.",
+        "icon": "ask"
+      },
+      {
+        "name": "Watch and follow along with high-quality videos.",
+        "icon": "watch"
+      }
+    ]
   }
 }
