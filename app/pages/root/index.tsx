@@ -34,7 +34,7 @@ const Root:FunctionComponent = () => {
         </div>
         <Topics />
       </section>
-      <section id='how' className={c(styles.how, 'pt-20')}>
+      <section id='how' className={c(styles.how, 'pt-20 pb-10')}>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-denim-darker mx-5 leading-normal'>{t('root.how.heading')}</h2>
         </div>
