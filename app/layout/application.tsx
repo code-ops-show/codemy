@@ -1,4 +1,5 @@
 import * as React from 'react'
+import c from 'classnames'
 import { FunctionComponent, useContext } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Helmet } from 'react-helmet'
@@ -21,7 +22,7 @@ const Application: FunctionComponent<any> = () => {
   const { route } = context
 
   return (
-    <main id='application' className={styles.app}>
+    <main id='application' className={c(styles.app, 'font-codemy-sans')}>
       <Helmet>
         <meta charSet='utf-8' />
         <title>{t('application.title')}</title>
