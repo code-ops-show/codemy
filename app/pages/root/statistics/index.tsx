@@ -32,7 +32,7 @@ const Statistics: FunctionComponent = () => {
   if (total_duration.public === 0) return <Loader />
 
   return (
-    <div className='ml-5 mr-10'>
+    <div className='ml-5 mr-5 sm:mr-5 md:mr-10 lg:mr-10 xl:mr-10'>
       {Object.keys(total_duration).map(key => 
         <Duration key={`duration_${key}`} id={key} duration={total_duration[key]} />
       )}
