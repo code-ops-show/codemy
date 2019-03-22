@@ -2,7 +2,7 @@
   background-image: linear-gradient(45deg, config('colors.pacific-dark'), config('colors.denim'))
   transform: skewY(-6deg)
   transform-origin: top left
-  @apply absolute pin-t pin-b pin-l pin-r z-0 h-full w-full
+  @apply absolute pin z-0 h-full w-full
 
 .how
   background-image: linear-gradient(135deg, config('colors.denim-lighter'), config('colors.grey-lightest'))
@@ -10,3 +10,8 @@
 .about
   background-image: url('./coder.png')
   background-repeat: no-repeat
+  background-attachment: fixed
+  background-position: left center
+
+.stat_graphic
+  bottom: -2.5rem

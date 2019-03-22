@@ -52,17 +52,17 @@ const Root:FunctionComponent = () => {
 
         <RecentUploads />
       </section>
-      <section id='statistics' className='bg-grey pt-20'>
+      <section id='statistics' className='bg-grey pt-20 pb-10'>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-black'>{t('root.statistics.heading')}</h2>
         </div>
 
-        <div className='flex container mx-auto mt-20'>
-          <div className='flex-1'>
+        <div className='flex container mx-auto flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row mt-20'>
+          <div className='flex-1 z-10'>
             <Statistics />
           </div>
-          <div className='flex-1 ml-10 relative'>
-            <img src={stats} className='absolute pin-b' alt={t('root.statistics.heading')} />
+          <div className='flex-1 ml-10 relative z-0'>
+            <img src={stats} className={c('absolute', styles.stat_graphic)} alt={t('root.statistics.heading')} />
           </div>
         </div>
       </section>
