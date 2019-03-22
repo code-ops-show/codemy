@@ -11,12 +11,7 @@ const Nav: FunctionComponent = () => {
   const { t } = useTranslation('layout')
 
   return (
-    <nav
-      className={c(
-        'flex items-center justify-between flex-wrap pt-10 pb-20',
-        styles.bg
-      )}
-    >
+    <nav className='flex items-center justify-between flex-wrap pt-10 pb-20'>
       <div className='container mx-auto flex z-10'>
         <div className='flex items-center flex-no-shrink text-white ml-5 mr-10'>
           <img src={logo} width={54} height={54} alt='Codemy Logo' />
@@ -29,21 +24,39 @@ const Nav: FunctionComponent = () => {
             >
               {t('application.nav.home')}
             </a>
-            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+            <a
+              href='#'
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+            >
               {t('application.nav.videos')}
             </a>
-            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+            <a
+              href='#'
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+            >
               {t('application.nav.membership')}
             </a>
-            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+            <a
+              href='#'
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+            >
               {t('application.nav.about')}
             </a>
           </div>
           <div className='text-lg'>
-            <a href='#' className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+            <a
+              href='#'
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+            >
               {t('application.nav.login')}
             </a>
-            <a href='#' className={c(styles.link, 'mr-5 border rounded px-4 py-2 hover:bg-white hover:text-denim')}>
+            <a
+              href='#'
+              className={c(
+                styles.link,
+                'mr-5 border rounded px-4 py-2 hover:bg-white hover:text-denim'
+              )}
+            >
               {t('application.nav.register')}
             </a>
           </div>

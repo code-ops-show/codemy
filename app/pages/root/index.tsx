@@ -18,8 +18,8 @@ const Root:FunctionComponent = () => {
 
   return (
     <>
-      <section id='hero' className='py-10 relative z-0'>
-        <div className={c(styles.bg, '')}></div>
+      <section id='hero' className='py-10 relative z-0 bg-white'>
+        <div className={c(styles.bg)}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>
             <h1 className='mb-10 font-normal antialiased text-5xl mr-20'>{t('root.slogan')}</h1>
@@ -30,7 +30,7 @@ const Root:FunctionComponent = () => {
           </div>
         </div>
       </section>
-      <section id='what' className='pt-10'>
+      <section id='what' className='pt-10 bg-white'>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-black'>{t('root.what.heading')}</h2>
           <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto px-5'>{t('root.what.description')}</p>
@@ -45,7 +45,7 @@ const Root:FunctionComponent = () => {
 
         <Features />
       </section>
-      <section id='recent_uploads' className='pt-20'>
+      <section id='recent_uploads' className='pt-20 pb-10 bg-white'>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-black'>{t('root.recent_uploads.heading')}</h2>
         </div>

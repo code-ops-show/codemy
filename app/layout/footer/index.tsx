@@ -12,7 +12,7 @@ const Footer: FunctionComponent = () => {
   const criteria: Array<CriterionData> = t('application.footer.criteria', { returnObjects: true })
 
   return (
-    <footer className='bg-pacific-darker py-20 relative text-white'>
+    <footer className='py-20 relative text-white'>
       <div className='container mx-auto flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
         <div className='flex-no-shrink z-10 mt-10 ml-5 mr-20 mb-10'>
           <img src={logo} width={64} />

@@ -6,8 +6,6 @@ import { Helmet } from 'react-helmet'
 
 import { useRoute } from 'react-router5'
 
-import * as styles from './application.sass'
-
 import Nav from './nav'
 import Footer from './footer'
 
@@ -20,7 +18,7 @@ const Application: FunctionComponent<any> = () => {
   const { route } = useRoute()
 
   return (
-    <main id='application' className={c(styles.app, 'font-codemy-sans')}>
+    <main id='application' className='font-codemy-sans'>
       <Helmet>
         <meta charSet='utf-8' />
         <title>{t('application.title')}</title>
@@ -29,7 +27,9 @@ const Application: FunctionComponent<any> = () => {
         <link rel='shortcut icon' type='image/png' href={favicon} />
       </Helmet>
       <Nav />
-      <Pages route={route} />
+      <div className='min-h-screen'>
+        <Pages route={route} />
+      </div>
       <Footer />
     </main>
   )
