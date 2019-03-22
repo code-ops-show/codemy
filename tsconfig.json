@@ -1,6 +1,9 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "paths": {
+      "~*": ["./app/*"]
+    },
     "target": "es2018",
     "module": "esnext",
     "sourceMap": true,

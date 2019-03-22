@@ -5,11 +5,11 @@ import PostProps from 'typings/post'
 
 import Post from './post'
 
-const getPosts = async (callback: Dispatch<Array<PostProps>>) => {
+const getPosts = async (dispatch: Dispatch<Array<PostProps>>) => {
   const response = await fetch('https://www.codemy.net/v1/posts/search/page/1')
   const json = await response.json()
 
-  callback(json.data)
+  dispatch(json.data)
 }
 
 const RecentUploads: FunctionComponent = () => {
@@ -22,10 +22,12 @@ const RecentUploads: FunctionComponent = () => {
   )
 
   return (
-    <div className='container mx-auto'>
-      {posts.map(post => (
-        <Post {...post} />
-      ))}
+    <div className='container mx-auto mt-20'>
+      <div className='flex content-start flex-wrap'>
+        {posts.map(post => (
+          <Post {...post} />
+        ))}
+      </div>
     </div>
   )
 }
