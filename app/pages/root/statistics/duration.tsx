@@ -10,7 +10,7 @@ type DurationProps = {
   duration: number
 }
 
-const colors: {[key: string]: string} = {
+const colors: { [key: string]: string } = {
   member: 'purple',
   public: 'blue',
   registered: 'green'
@@ -24,7 +24,13 @@ const Duration: FunctionComponent<DurationProps> = props => {
   const { minutes, seconds } = friendlyDuration
 
   return (
-    <div className={c('flex rounded font-semibold bg-white border-l-8 p-10 shadow-lg mb-6', `border-${colors[id]}`)}>
+    <div
+      className={c(
+        'flex rounded font-semibold bg-white border-l-8 p-10 shadow-lg mb-6',
+        `border-${colors[id]}`
+      )}
+      data-aos='fade-up' data-aos-anchor-placement='center-bottom'
+    >
       <div className='flex-shrink text-teal-dark text-4xl mr-5'>
         {minutes}:{seconds}
       </div>

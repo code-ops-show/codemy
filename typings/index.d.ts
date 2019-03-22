@@ -14,3 +14,4 @@ declare module "*.svg" {
 }
 
 declare module 'classnames'
+declare module 'aos'

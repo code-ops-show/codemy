@@ -25,7 +25,7 @@ const Root:FunctionComponent = () => {
             <h1 className='mb-10 font-normal antialiased text-5xl mr-20'>{t('root.slogan')}</h1>
             <p className='leading-normal font-normal text-2xl mr-12'>{t('root.description')}</p>
           </div>
-          <div className='flex-1 mx-5'>
+          <div className='flex-1 mx-5 animated fadeIn'>
             <SignUp />
           </div>
         </div>

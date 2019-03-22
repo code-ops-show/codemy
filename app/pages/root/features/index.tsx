@@ -16,7 +16,7 @@ const Features: FunctionComponent = () => {
 
   return (
     <div className='container mx-auto flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row'>
-      <div className='flex-1 mt-20 mx-5'>
+      <div className='flex-1 mt-20 mx-5' data-aos='fade-up'>
         <img src={media} />
       </div>
       <div className='flex-1 mt-10 mx-5 sm:mx-5 md:mx-20 lg:mx-20 xl:mx-20'>

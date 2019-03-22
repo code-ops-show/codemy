@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { RouterProvider } from 'react-router5'
+import AOS from 'aos'
 
 import createRouter from './router'
 
@@ -14,7 +15,9 @@ const router = createRouter({
   logger: true
 })
 
-document.addEventListener('DOMContentLoaded', () =>
+document.addEventListener('DOMContentLoaded', () => {
+  AOS.init()
+
   router.start(() =>
     render(
       <RouterProvider router={router}>
@@ -23,4 +26,5 @@ document.addEventListener('DOMContentLoaded', () =>
       document.getElementById('app')
     )
   )
-)
+})
+
