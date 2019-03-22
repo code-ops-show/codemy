@@ -15,39 +15,33 @@
     "description": "Learn to build real production-ready applications. We've divided our video into 3 main criterias.",
     "criteria":[
       {
-        "name": "Web Application Development",
+        "name": "Front-end Development",
         "color": "green",
         "icon": "fas fa-laptop-code fa-2x",
         "tags": [
-          "Git",
           "HTML / CSS",
-          "React",
-          "Ruby",
-          "Elixir",
-          "Rails"
+          "React"
         ]
       },
       {
-        "name": "Development Environment",
-        "color": "blue",
-        "icon": "fas fa-terminal fa-2x",
-        "tags": [
-          "macOS",
-          "Windows",
-          "Linux",
-          "VSCode"
-        ]
-      },
-      {
-        "name": "DevOps",
+        "name": "Back-end Development",
         "color": "black",
         "icon": "fas fa-cogs fa-2x",
         "tags": [
-          "Terraform",
-          "LXD",
-          "Alpine Linux",
-          "GCP",
-          "AWS"
+          "Ruby",
+          "Elixir",
+          "Ruby on Rails"
+        ]
+      },
+      {
+        "name": "Development Tooling",
+        "color": "blue",
+        "icon": "fas fa-terminal fa-2x",
+        "tags": [
+          "Git",
+          "macOS",
+          "Windows",
+          "Linux"
         ]
       }
     ]
@@ -71,5 +65,17 @@
   },
   "recent_uploads": {
     "heading": "Recently Uploaded Videos"
+  },
+  "statistics": {
+    "heading": "Statistics",
+    "durations": {
+      "member": "Minutes of high quality Member Exclusive videos",
+      "public": "Minutes of FREE Public available videos",
+      "registered": "Minutes of videos for Users who Register and Confirm their account"
+    }
+  },
+  "about": {
+    "heading": "Why I learned to Code",
+    "subtext": "A Founder Life - Zack Siri"
   }
 }

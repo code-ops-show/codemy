@@ -8,7 +8,8 @@ i18n
   .init({
     resources: locales,
     lng: "en",
-    fallbackLng: "en"
+    fallbackLng: "en",
+    saveMissing: true
   })
 
 export default i18n

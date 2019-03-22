@@ -5,6 +5,8 @@ import PostProps from 'typings/post'
 
 import Loader from '~/components/loader'
 
+import MemberButton from '../member_button'
+
 import Post from './post'
 
 const url: string = 'https://www.codemy.net/v1/posts/search/page/1'
@@ -27,9 +29,11 @@ const RecentUploads: FunctionComponent = () => {
     <div className='container mx-auto mt-20'>
       <div className='flex content-start flex-wrap'>
         {posts.map(post => (
-          <Post {...post} />
+          <Post key={`post_${post.slug}`} {...post} />
         ))}
       </div>
+
+      <MemberButton />
     </div>
   )
 }

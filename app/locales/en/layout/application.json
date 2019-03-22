@@ -8,5 +8,56 @@
     "about": "About",
     "login": "Login",
     "register": "Register"
+  },
+  "footer": {
+    "criteria": [
+      {
+        "name": "Front-end Development",
+        "platforms": [
+          {
+            "name": "React",
+            "sets": [
+              "React Foundation",
+              "React Intermediate"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Back-end Development",
+        "platforms": [
+          {
+            "name": "Ruby",
+            "sets": [
+              "Ruby from Scratch"
+            ]
+          },
+          {
+            "name": "Elixir",
+            "sets": [
+              "Elixir Foundation"
+            ]
+          },
+          {
+            "name": "Ruby on Rails",
+            "sets": [
+              "Rails Foundation",
+              "Rails API"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Development Tooling",
+        "platforms": [
+          {
+            "name": "macOS",
+            "sets": [
+              "macOS Environment Setup"
+            ]
+          }
+        ]
+      }
+    ]
   }
 }
