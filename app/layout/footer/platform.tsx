@@ -12,8 +12,8 @@ const Platform: FunctionComponent<PlatformData> = props => {
   return (
     <div className='ml-3 mb-5'>
       <h5 className='text-lg font-normal text-pacific-light mb-3'>{name}</h5>
-      {sets.map(set => 
-        <a href='#' className='block mb-2 ml-3 no-underline text-pacific-lighter hover:text-white'>{set}</a>)}
+      {sets.map((set, index) => 
+        <a href='#' key={`platform_set_link_${index}`} className='block mb-2 ml-3 no-underline text-pacific-lighter hover:text-white'>{set}</a>)}
     </div>
   )
 }
