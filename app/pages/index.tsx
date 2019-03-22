@@ -1,20 +1,12 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
-import { RouteNode, useRouteNode } from 'react-router5'
+import { useRouteNode } from 'react-router5'
 import { lazy, Suspense } from 'react'
-
-import { GridLoader } from 'react-spinners'
 
 import { constants, State } from 'router5'
 import { RouteProps } from 'typings/route'
 
-const Loader: FunctionComponent = () => {
-  return (
-    <div className='flex container mx-auto p-20 justify-center'>
-      <GridLoader color='#fff' />
-    </div>
-  )
-}
+import Loader from '~/components/loader'
 
 interface PagesIndex {
   [key: string]: React.LazyExoticComponent<any>

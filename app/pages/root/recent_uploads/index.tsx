@@ -3,10 +3,14 @@ import { FunctionComponent, useState, useEffect, Dispatch } from 'react'
 
 import PostProps from 'typings/post'
 
+import Loader from '~/components/loader'
+
 import Post from './post'
 
+const url: string = 'https://www.codemy.net/v1/posts/search/page/1'
+
 const getPosts = async (dispatch: Dispatch<Array<PostProps>>) => {
-  const response = await fetch('https://www.codemy.net/v1/posts/search/page/1')
+  const response = await fetch(url)
   const json = await response.json()
 
   dispatch(json.data)
@@ -17,9 +21,7 @@ const RecentUploads: FunctionComponent = () => {
 
   useEffect(() => { getPosts(setPosts) }, [])
 
-  if (posts.length === 0) return (
-    <div>Loading...</div>
-  )
+  if (posts.length === 0) return <Loader />
 
   return (
     <div className='container mx-auto mt-20'>
