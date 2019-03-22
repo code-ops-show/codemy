@@ -17,12 +17,13 @@ const Application: FunctionComponent<any> = () => {
   const { t } = useTranslation('layout')
   const { route } = useRoute()
 
+  const metaTags: Array<{ name: string, content: string }> = [
+    { name: 'description', content: t('application.description') }
+  ]
+
   return (
     <main id='application' className='font-codemy-sans'>
-      <Helmet>
-        <title>{t('application.title')}</title>
-        <meta name='description' content={t('application.description')} />
-      </Helmet>
+      <Helmet title={t('application.title')} meta={metaTags} />
       <Nav />
       <div className='min-h-screen'>
         <Pages route={route} />

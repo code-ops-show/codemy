@@ -13,6 +13,7 @@ interface PagesIndex {
 
 const pages: PagesIndex = {
   root: lazy(() => import('./root')),
+  auth: lazy(() => import('./auth')),
   not_found: lazy(() => import('./not_found'))
 }
 

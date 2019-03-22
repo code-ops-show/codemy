@@ -2,6 +2,7 @@ import * as React from 'react'
 import c from 'classnames'
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router5'
 
 import logo from '~/assets/logo.svg'
 
@@ -18,12 +19,13 @@ const Nav: FunctionComponent = () => {
         </div>
         <div className='w-full block flex flex-grow lg:flex lg:items-center lg:w-auto'>
           <div className='text-lg lg:flex-grow'>
-            <a
-              href='#'
+            <Link
+              routeName='root'
+              activeClassName={styles.active}
               className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
             >
               {t('application.nav.home')}
-            </a>
+            </Link>
             <a
               href='#'
               className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
@@ -44,12 +46,13 @@ const Nav: FunctionComponent = () => {
             </a>
           </div>
           <div className='text-lg'>
-            <a
-              href='#'
+            <Link
+              routeName='auth.login'
+              activeClassName={styles.active}
               className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
             >
               {t('application.nav.login')}
-            </a>
+            </Link>
             <a
               href='#'
               className={c(
