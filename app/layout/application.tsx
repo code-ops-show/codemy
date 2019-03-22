@@ -20,11 +20,8 @@ const Application: FunctionComponent<any> = () => {
   return (
     <main id='application' className='font-codemy-sans'>
       <Helmet>
-        <meta charSet='utf-8' />
         <title>{t('application.title')}</title>
-        <link rel='canonical' href='https://about.codemy.net' />
         <meta name='description' content={t('application.description')} />
-        <link rel='shortcut icon' type='image/png' href={favicon} />
       </Helmet>
       <Nav />
       <div className='min-h-screen'>
