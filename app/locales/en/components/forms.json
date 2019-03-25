@@ -1,6 +1,7 @@
 {
   "login": {
     "heading": "Login",
-    "description": "Login to your account for a personalized experience."
+    "description": "Login to your account for a personalized experience.",
+    "home": "Home"
   }
 }

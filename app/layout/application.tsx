@@ -9,11 +9,9 @@ import { useRoute } from 'react-router5'
 import Nav from './nav'
 import Footer from './footer'
 
-import favicon from '~/assets/favicon.png'
-
 import Pages from '../pages'
 
-const Application: FunctionComponent<any> = () => {
+const Application: FunctionComponent = () => {
   const { t } = useTranslation('layout')
   const { route } = useRoute()
 
@@ -25,7 +23,7 @@ const Application: FunctionComponent<any> = () => {
     <main id='application' className='font-codemy-sans'>
       <Helmet title={t('application.title')} meta={metaTags} />
       <Nav />
-      <div className='min-h-screen'>
+      <div>
         <Pages route={route} />
       </div>
       <Footer />

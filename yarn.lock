@@ -6662,6 +6662,11 @@ route-node@3.4.2:
     path-parser "4.2.0"
     search-params "2.1.3"
 
+router5-helpers@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/router5-helpers/-/router5-helpers-7.0.1.tgz#dda392373fd68ee2947d0d6c33c0331844375fc3"
+  integrity sha512-hJnjaIgMfv+HyJdJqsbUmjEjOEOB+nuFOgJxykzuOfJFOyBcv+6LkW92h+H1sF4uZ/27q6zUAtALOgKrPQ3flw==
+
 router5-plugin-browser@^7.0.2:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/router5-plugin-browser/-/router5-plugin-browser-7.0.2.tgz#a13376a1d72fd696b0d5da5a697e7aeb39f5fd24"
