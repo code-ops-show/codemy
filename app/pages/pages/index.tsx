@@ -1,20 +1,20 @@
 import * as React from 'react'
 import { useRouteNode } from 'react-router5'
 import { FunctionComponent } from 'react'
-import { PageIndex } from 'typings/page_index' 
+import { PageIndex } from 'typings/page_index'
 
-import login from './login'
+import membership from './membership'
 
 const pages: PageIndex = {
-  'auth.login': login
+  'pages.pricing': membership
 }
 
-const Auth: FunctionComponent = () => {
-  const { route } = useRouteNode('auth')
+const Pages: FunctionComponent = () => {
+  const { route } = useRouteNode('pages')
 
   const SubPage = pages[route.name]
 
   return <SubPage route={route} />
 }
 
-export default Auth
+export default Pages
