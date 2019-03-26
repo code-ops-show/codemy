@@ -5,10 +5,12 @@ import { PageIndex } from 'typings/page_index'
 
 import terms from './terms'
 import membership from './membership'
+import privacy from './privacy'
 
 const pages: PageIndex = {
   'pages.terms': terms,
-  'pages.membership': membership
+  'pages.membership': membership,
+  'pages.privacy': privacy
 }
 
 const Pages: FunctionComponent = () => {

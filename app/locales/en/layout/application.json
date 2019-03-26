@@ -11,6 +11,8 @@
   },
   "footer": {
     "copyright": "Copyright © 2019 Codemy.net All Rights Reserved.",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy",
     "auth": {
       "links": [
         { "title": "Home", "path": "root" },

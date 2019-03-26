@@ -1,8 +1,12 @@
 import * as React from 'react'
+import c from 'classnames'
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router5'
 
 import logo from '~/assets/logo.svg'
+
+import * as styles from './default.sass'
 
 import { Criterion, CriterionData } from './criterion'
 
@@ -20,8 +24,20 @@ const Default: FunctionComponent = () => {
         {criteria.map((criterion, index) => 
           <Criterion key={`footer_criterion_${index}`} {...criterion} />)}
       </div>
-      <div className='container mx-auto mt-5'>
-        <p className='text-pacific-light'>{t('application.footer.copyright')}</p>
+      <div className={c(styles.legal, 'container mx-auto mt-5 text-center')}>
+        <p className='mx-5'>
+          <span className='text-pacific-light'>{t('application.footer.copyright')}</span>
+          <span>
+            <Link routeName='pages.terms' className='text-pacific-light'>
+              {t('application.footer.terms')}
+            </Link>
+          </span>
+          <span>
+            <Link routeName='pages.privacy' className='text-pacific-light'>
+              {t('application.footer.privacy')}
+            </Link>
+          </span>
+        </p>
       </div>
     </footer>
   )
