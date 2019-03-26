@@ -1,3 +1,4 @@
 import login from './login.json'
+import register from './register.json'
 
-export default { login }
+export default { login, register }
