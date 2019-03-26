@@ -15,12 +15,17 @@ const Auth: FunctionComponent = () => {
   )
 
   return (
-    <footer className='py-5 text-white text-center'>
-      {links.map((link, index) =>
-        <Link key={`auth_footer_${index}`} routeName={link.path} className={c(styles.link, 'text-white no-underline')}>
-          {link.title}
-        </Link>
-      )}
+    <footer className='text-white text-center'>
+      <div className='mt-8 mb-5'>
+        {links.map((link, index) =>
+          <Link key={`auth_footer_${index}`} routeName={link.path} className={c(styles.link, 'text-white no-underline')}>
+            {link.title}
+          </Link>
+        )}
+      </div>
+      <div className='container mx-auto mt-5'>
+        <p className='text-pacific-light'>{t('application.footer.copyright')}</p>
+      </div>
     </footer>
   )
 }

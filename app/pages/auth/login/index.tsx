@@ -12,7 +12,7 @@ const Login: FunctionComponent<RouteProps> = props => {
 
   return (
     <div className='container max-w-sm mx-auto animated fadeIn'>
-      <form className='bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-5'>
+      <form className='bg-white shadow-md rounded p-8 mb-4 mx-5'>
         <h1 className='text-grey-darkest mb-5 text-3xl font-thin'>{t('auth.login.heading')}</h1>
         <p className='text-grey-dark mb-5 leading-normal text-lg'>{t('auth.login.description')}</p>
         <div className='mb-6'>

@@ -20,6 +20,9 @@ const Default: FunctionComponent = () => {
         {criteria.map((criterion, index) => 
           <Criterion key={`footer_criterion_${index}`} {...criterion} />)}
       </div>
+      <div className='container mx-auto mt-5'>
+        <p className='text-pacific-light'>{t('application.footer.copyright')}</p>
+      </div>
     </footer>
   )
 }

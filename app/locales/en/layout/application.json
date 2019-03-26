@@ -10,6 +10,7 @@
     "register": "Register"
   },
   "footer": {
+    "copyright": "Copyright © 2019 Codemy.net All Rights Reserved.",
     "auth": {
       "links": [
         { "title": "Home", "path": "root" },
