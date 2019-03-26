@@ -77,7 +77,7 @@ const Nav: FunctionComponent = () => {
   if (auth) { logoClass = 'text-center' }
 
   return (
-    <nav className='flex items-center justify-between flex-wrap pt-10 pb-20'>
+    <nav className={c('flex items-center justify-between flex-wrap pt-10', { ['pb-20']: !auth, ['pb-10']: auth })}>
       <div className={c('container mx-auto z-10', { flex: !auth })}>
         <div className={logoClass}>
           <img src={logo} width={54} height={54} alt='Codemy Logo' />

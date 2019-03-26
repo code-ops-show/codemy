@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
+import { Link } from 'react-router5'
 import { useTranslation } from 'react-i18next'
 
 import * as form from '~/styles/auth/form.sass'
@@ -30,6 +31,11 @@ const Login: FunctionComponent<RouteProps> = props => {
           <button className={form.button}>
             {t('auth.login.button')}
           </button>
+        </div>
+        <div className='mt-5 text-center'>
+          <Link routeName='auth.login' className='text-teal-dark no-underline hover:underline'>
+            {t('auth.login.register')}
+          </Link>
         </div>
       </form>
     </div>

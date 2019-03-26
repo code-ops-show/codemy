@@ -4,5 +4,6 @@
   "home": "Home",
   "email": "Email",
   "password": "Password",
-  "button": "Login"
+  "button": "Login",
+  "register": "Don't have an account? Register"
 }
