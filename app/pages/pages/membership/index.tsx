@@ -4,7 +4,9 @@ import { RouteProps } from 'typings/route'
 
 const Membership: FunctionComponent<RouteProps> = () => {
   return(
-    <div></div>
+    <div className='animated fadeIn'>
+      
+    </div>
   )
 }
 
