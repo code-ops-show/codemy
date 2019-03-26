@@ -15,7 +15,7 @@
       "links": [
         { "title": "Home", "path": "root" },
         { "title": "Library", "path": "root" },
-        { "title": "Membership", "path": "root" }
+        { "title": "Membership", "path": "pages.membership" }
       ]
     },
     "default": {
