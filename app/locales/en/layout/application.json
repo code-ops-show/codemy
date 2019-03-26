@@ -11,7 +11,11 @@
   },
   "footer": {
     "auth": {
-      
+      "links": [
+        { "title": "Home", "path": "root" },
+        { "title": "Library", "path": "root" },
+        { "title": "Membership", "path": "root" }
+      ]
     },
     "default": {
       "criteria": [
