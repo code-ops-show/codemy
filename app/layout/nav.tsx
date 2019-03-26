@@ -32,12 +32,11 @@ const PageLinks: FunctionComponent = () => {
         >
           {t('application.nav.videos')}
         </a>
-        <a
-          href='#'
-          className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
-        >
+        <Link routeName='pages.membership' 
+              activeClassName={styles.active} 
+              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
           {t('application.nav.membership')}
-        </a>
+        </Link>
         <a
           href='#'
           className={c(styles.link, 'mr-10 hover:text-teal-lighter')}

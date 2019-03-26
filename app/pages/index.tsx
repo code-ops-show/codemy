@@ -11,6 +11,7 @@ import Loader from '~/components/loader'
 const pages: LazyPagesIndex = {
   root: lazy(() => import('./root')),
   auth: lazy(() => import('./auth')),
+  pages: lazy(() => import('./pages')),
   not_found: lazy(() => import('./not_found'))
 }
 

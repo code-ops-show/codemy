@@ -6,7 +6,7 @@ import { PageIndex } from 'typings/page_index'
 import membership from './membership'
 
 const pages: PageIndex = {
-  'pages.pricing': membership
+  'pages.membership': membership
 }
 
 const Pages: FunctionComponent = () => {
