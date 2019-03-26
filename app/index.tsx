@@ -15,16 +15,14 @@ const router = createRouter({
   logger: true
 })
 
-document.addEventListener('DOMContentLoaded', () => {
-  AOS.init()
+AOS.init()
 
-  router.start(() =>
-    render(
-      <RouterProvider router={router}>
-        <Application />
-      </RouterProvider>,
-      document.getElementById('app')
-    )
+router.start(() =>
+  render(
+    <RouterProvider router={router}>
+      <Application />
+    </RouterProvider>,
+    document.getElementById('app')
   )
-})
+)
 
