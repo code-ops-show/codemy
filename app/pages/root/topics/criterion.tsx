@@ -15,14 +15,14 @@ const Criterion: FunctionComponent<CriterionProps> = (props) => {
   const { icon, color, name, tags } = props
 
   return (
-    <div className='flex mb-5'>
+    <div className={styles.criterion}>
       <div className={`flex-no-shrink mr-5 p-5 bg-${color} text-white rounded-full`}>
         <i className={c(icon, 'w10 h-10')}></i>
       </div>
       <div className='flex-grow'>
         <h3 className='mt-2 text-denim-dark font-normal mb-3'>{name}</h3>
         {tags.map(tag => 
-          <span key={`tag_${tag}`} className={c(styles.tag)}>
+          <span key={`tag_${tag}`} className={styles.tag}>
             <a href='#' className='text-grey-darker hover:text-denim-light'>{tag}</a>
           </span>)}
       </div>

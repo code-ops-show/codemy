@@ -32,15 +32,15 @@ const Root:FunctionComponent<RouteProps> = _props => {
           </div>
         </div>
       </section>
-      <section id='what' className='pt-10 bg-white'>
+      <section id='what' className='pt-10 pb-10 bg-white'>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-black'>{t('root.what.heading')}</h2>
           <p className='text-grey-darkest text-center my-5 text-lg leading-normal max-w-sm mx-auto px-5'>{t('root.what.description')}</p>
         </div>
-
+        
         <Topics />
       </section>
-      <section id='how' className={c(styles.how, 'pt-20 pb-10')}>
+      <section id='how' className={styles.how}>
         <div className='container mx-auto'>
           <h2 className='font-normal text-4xl text-center text-denim-darker mx-5 leading-normal'>{t('root.how.heading')}</h2>
         </div>
