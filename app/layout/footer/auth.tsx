@@ -23,8 +23,8 @@ const Auth: FunctionComponent = () => {
           </Link>
         )}
       </div>
-      <div className='container mx-auto mt-5'>
-        <p className='text-pacific-light'>{t('application.footer.copyright')}</p>
+      <div className='container mx-auto mt-5 mb-10'>
+        <p className='text-pacific-light text-xs'>{t('application.footer.copyright')}</p>
       </div>
     </footer>
   )

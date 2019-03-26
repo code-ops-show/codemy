@@ -25,7 +25,7 @@ const Default: FunctionComponent = () => {
           <Criterion key={`footer_criterion_${index}`} {...criterion} />)}
       </div>
       <div className={c(styles.legal, 'container mx-auto mt-5 text-center')}>
-        <p className='mx-5'>
+        <p className='mx-5 text-sm'>
           <span className='text-pacific-light'>{t('application.footer.copyright')}</span>
           <span>
             <Link routeName='pages.terms' className='text-pacific-light'>
