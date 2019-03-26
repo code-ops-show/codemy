@@ -4,14 +4,11 @@ import { useRouteNode } from 'react-router5'
 import { lazy, Suspense } from 'react'
 import { constants, State } from 'router5'
 import { RouteProps } from 'typings/route'
+import { LazyPagesIndex } from 'typings/page_index'
 
 import Loader from '~/components/loader'
 
-interface PagesIndex {
-  [key: string]: React.LazyExoticComponent<any>
-}
-
-const pages: PagesIndex = {
+const pages: LazyPagesIndex = {
   root: lazy(() => import('./root')),
   auth: lazy(() => import('./auth')),
   not_found: lazy(() => import('./not_found'))
