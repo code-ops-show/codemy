@@ -12,6 +12,7 @@ import Statistics from './statistics'
 import stats from './stats.svg'
 
 import * as styles from './index.sass'
+import * as hero from '~/styles/hero.sass'
 
 import { RouteProps } from 'typings/route'
 
@@ -21,7 +22,7 @@ const Root:FunctionComponent<RouteProps> = _props => {
   return (
     <div className='animated fadeIn'>
       <section id='hero' className='py-10 relative z-0 bg-white'>
-        <div className={c(styles.bg)}></div>
+        <div className={hero.bg}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>
             <h1 className='mb-10 font-normal antialiased text-5xl mr-20'>{t('root.slogan')}</h1>
