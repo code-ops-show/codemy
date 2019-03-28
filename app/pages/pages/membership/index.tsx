@@ -15,10 +15,16 @@ type PlansType = {
   free: PlanType
 }
 
+type FaqType = {
+  question: string,
+  answer: string
+}
+
 const Membership: FunctionComponent<RouteProps> = () => {
   const { t } = useTranslation('pages')
 
   const plans: PlansType = t('pages.membership.plans', { returnObjects: true })
+  const faqs: FaqType[] = t('pages.membership.faqs.content', { returnObjects: true })
   
   return(
     <div className='animated fadeIn'>
@@ -44,8 +50,28 @@ const Membership: FunctionComponent<RouteProps> = () => {
           </div>
         </div>
       </section>
-      <section>
+      <section id='faqs' className='bg-white pt-20 pb-10'>
+        <div className='container mx-auto'>
+          <h2 className='text-center text-4xl font-normal'>{t('pages.membership.faqs.heading')}</h2>
+          <div className='flex content-start flex-wrap items-stretch'>
+            {faqs.map(faq => 
+              <div className='w-1/2'>
+                <div className='m-10'>
+                  <h3 className='text-2xl font-light mb-10'>{faq.question}</h3>
+                  <p className='leading-normal text-lg text-grey-dark'>
+                    {faq.answer}
+                  </p>
+                </div>
+              </div>)}
+          </div>
+        </div>
 
+        <div className='container mx-auto mt-20 text-center'>
+          <h5 className='text-center font-normal text-2xl mb-10'>{t('pages.membership.more_questions')}</h5>
+          <button className='p-5 bg-teal mb-20 text-white rounded shadow'>
+            {t('pages.membership.contact')}
+          </button>
+        </div>
       </section>
     </div>
   )
