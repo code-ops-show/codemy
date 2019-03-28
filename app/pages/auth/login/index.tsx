@@ -33,7 +33,7 @@ const Login: FunctionComponent<RouteProps> = props => {
           </button>
         </div>
         <div className='mt-5 text-center'>
-          <Link routeName='auth.login' className='text-teal-dark no-underline hover:underline'>
+          <Link routeName='auth.register' className='text-teal-dark no-underline hover:underline'>
             {t('auth.login.register')}
           </Link>
         </div>

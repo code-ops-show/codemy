@@ -4,9 +4,11 @@ import { FunctionComponent } from 'react'
 import { PageIndex } from 'typings/page_index' 
 
 import login from './login'
+import register from './register'
 
 const pages: PageIndex = {
-  'auth.login': login
+  'auth.login': login,
+  'auth.register': register
 }
 
 const Auth: FunctionComponent = () => {

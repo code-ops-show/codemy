@@ -52,15 +52,13 @@ const PageLinks: FunctionComponent = () => {
         >
           {t('application.nav.login')}
         </Link>
-        <a
-          href='#'
+        <Link routeName='auth.register' 
           className={c(
             styles.link,
             'mr-5 border rounded px-4 py-2 hover:bg-white hover:text-denim'
-          )}
-        >
+          )}>
           {t('application.nav.register')}
-        </a>
+        </Link>
       </div>
     </div>
   )
