@@ -18,7 +18,7 @@ const Feature: FunctionComponent<FeatureProps> = (props) => {
   const { name, icon } = props
 
   return (
-    <div className='my-10 flex'>
+    <div className='my-10 flex' data-aos='fade-up'>
       <div className='flex-shrink'>
         <img src={icons[icon]} width={128} className='bg-white shadow rounded-full border-4 border-white w-32 h-32 align-middle mr-5' /> 
       </div>

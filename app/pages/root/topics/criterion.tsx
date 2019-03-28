@@ -15,7 +15,7 @@ const Criterion: FunctionComponent<CriterionProps> = (props) => {
   const { icon, color, name, tags } = props
 
   return (
-    <div className={styles.criterion}>
+    <div className={styles.criterion} data-aos='fade-up'>
       <div className={`flex-no-shrink mr-5 p-5 bg-${color} text-white rounded-full`}>
         <i className={c(icon, 'w10 h-10')}></i>
       </div>
