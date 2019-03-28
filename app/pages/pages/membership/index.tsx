@@ -38,11 +38,11 @@ const Membership: FunctionComponent<RouteProps> = () => {
         </div>
       </section>
       <section id='pricing' className={styles.pricing}>
-        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
+        <div className='flex flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1'>
             <Plan {...plans.monthly} />
           </div>
-          <div className='flex-none -mt-12'>
+          <div className='flex-none mt-0 sm:mt-0 md:mt-0 lg:-mt-12 xl:-mt-12'>
             <Plan {...plans.yearly} />
           </div>
           <div className='flex-1'>
