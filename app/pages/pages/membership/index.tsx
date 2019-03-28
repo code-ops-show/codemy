@@ -13,7 +13,7 @@ const Membership: FunctionComponent<RouteProps> = () => {
   
   return(
     <div className='animated fadeIn'>
-      <section id='hero' className={c(styles.hero, 'py-10 relative z-0 bg-white')}>
+      <section id='hero' className={styles.hero}>
         <div className={hero.bg}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>
@@ -22,10 +22,28 @@ const Membership: FunctionComponent<RouteProps> = () => {
           </div>
         </div>
       </section>
-      <section id='pricing'>
+      <section id='pricing' className={styles.pricing}>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
-          
+          <div className='flex-1'>
+            <div id='monthly' className='mx-10 shadow-lg'>
+              <div className='bg-pacific-light p-5 text-center text-3xl rounded-t-lg'>{t('pages.membership.monthly_price')}</div>
+              <div className='p-5 bg-white rounded-b-lg'>
+
+              </div>
+            </div>
+          </div>
+          <div className='flex-1'>
+            <div id='yearly'>
+            </div>
+          </div>
+          <div className='flex-1'>
+            <div id='free'>
+            </div>
+          </div>
         </div>
+      </section>
+      <section>
+
       </section>
     </div>
   )
