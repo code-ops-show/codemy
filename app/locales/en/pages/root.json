@@ -30,6 +30,15 @@
         ]
       },
       {
+        "name": "Deployment",
+        "color": "purple",
+        "icon": "fas fa-space-shuttle fa-2x",
+        "tags": [
+          "Netlify",
+          "Heroku"
+        ]
+      },
+      {
         "name": "Development Tooling",
         "color": "blue",
         "icon": "fas fa-terminal fa-2x",
