@@ -1,5 +1,4 @@
 import * as React from 'react'
-import c from 'classnames'
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -8,8 +7,18 @@ import { RouteProps } from 'typings/route'
 import * as hero from '~/styles/hero.sass'
 import * as styles from './index.sass'
 
+import { Plan, PlanType } from './plan'
+
+type PlansType = {
+  monthly: PlanType,
+  yearly: PlanType, 
+  free: PlanType
+}
+
 const Membership: FunctionComponent<RouteProps> = () => {
   const { t } = useTranslation('pages')
+
+  const plans: PlansType = t('pages.membership.plans', { returnObjects: true })
   
   return(
     <div className='animated fadeIn'>
@@ -25,20 +34,13 @@ const Membership: FunctionComponent<RouteProps> = () => {
       <section id='pricing' className={styles.pricing}>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1'>
-            <div id='monthly' className='mx-10 shadow-lg'>
-              <div className='bg-pacific-light p-5 text-center text-3xl rounded-t-lg'>{t('pages.membership.monthly_price')}</div>
-              <div className='p-5 bg-white rounded-b-lg'>
-
-              </div>
-            </div>
+            <Plan {...plans.monthly} />
+          </div>
+          <div className='flex-none -mt-12'>
+            <Plan {...plans.yearly} />
           </div>
           <div className='flex-1'>
-            <div id='yearly'>
-            </div>
-          </div>
-          <div className='flex-1'>
-            <div id='free'>
-            </div>
+            <Plan {...plans.free} />
           </div>
         </div>
       </section>

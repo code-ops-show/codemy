@@ -1,5 +1,50 @@
 {
   "heading": "Learn to Code with Codemy.net membership!",
   "slogan": "Learn to code by watching our 'Code Along' video series that show you how without skipping any steps.",
-  "monthly_price": "$19"
+  "plans": {
+    "yearly": {
+      "price": {
+        "value": "$15 / month",
+        "explain": "(billed yearly) $180 / year",
+        "color": "white"
+      },
+      "heading": "Yearly Member",
+      "color": "teal",
+      "action": "Join ",
+      "points":[
+        "Best Value",
+        "21% Discounted Price",
+        "Member Exclusive Content",
+        "Priority Support",
+        "Keep us Ad-free",
+        "Support Codemy.net Open-Source Efforts"
+      ]
+    },
+    "monthly": {
+      "price": {
+        "value": "$19 / month",
+        "color": "white"
+      },
+      "heading": "Monthly Member",
+      "color": "denim-light",
+      "action": "Join",
+      "points": [
+        "Member Exclusive Content",
+        "Priority Support",
+        "Keep us Ad-free"
+      ]
+    },
+    "free": {
+      "price": {
+        "value": "Free",
+        "color": "white"
+      },
+      "heading": "Free Member",
+      "color": "grey",
+      "action": "Sign Up",
+      "points": [
+        "Public Content"
+      ]
+    }
+  }
 }
