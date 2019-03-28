@@ -12,10 +12,12 @@ const Criterion: FunctionComponent<CriterionData> = props => {
   const { name, platforms } = props
 
   return (
-    <div className='flex-1 mx-5'>
-      <h4 className='text-xl font-semibold mb-3'>{name}</h4>
-      {platforms.map((platform, index) => 
-        <Platform key={`footer_platform_${index}`} {...platform} />)}
+    <div className='w-1/4 flex-none'>
+      <div className='mx-5'>
+        <h4 className='text-xl font-semibold mb-3'>{name}</h4>
+        {platforms.map((platform, index) => 
+          <Platform key={`footer_platform_${index}`} {...platform} />)}
+      </div>
     </div>
   )
 }

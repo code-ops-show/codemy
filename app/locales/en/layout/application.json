@@ -23,7 +23,7 @@
     "default": {
       "criteria": [
         {
-          "name": "Front-end Development",
+          "name": "Front-end",
           "platforms": [
             {
               "name": "React",
@@ -35,7 +35,7 @@
           ]
         },
         {
-          "name": "Back-end Development",
+          "name": "Back-end",
           "platforms": [
             {
               "name": "Ruby",
@@ -59,12 +59,24 @@
           ]
         },
         {
-          "name": "Development Tooling",
+          "name": "Deployment",
           "platforms": [
             {
-              "name": "macOS",
+              "name": "Automated",
               "sets": [
-                "macOS Environment Setup"
+                "Netlify",
+                "Heroku"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tooling",
+          "platforms": [
+            {
+              "name": "Setup",
+              "sets": [
+                "macOS Environment"
               ]
             }
           ]
