@@ -31,7 +31,7 @@
     "router5-plugin-logger": "^7.0.2",
     "svg-loaders": "^0.2.0",
     "tailwind": "^4.0.0",
-    "typeface-open-sans": "^0.0.54"
+    "typeface-source-sans-pro": "^0.0.54"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -61,7 +61,7 @@
   },
   "compress": {
     "test": ".",
-    "gzip": {   
+    "gzip": {
       "enabled": true
     },
     "brotli": {

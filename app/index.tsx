@@ -6,7 +6,7 @@ import AOS from 'aos'
 import createRouter from './router'
 
 import './i18n'
-import 'typeface-open-sans'
+import 'typeface-source-sans-pro'
 
 import { Application } from './layout'
 
