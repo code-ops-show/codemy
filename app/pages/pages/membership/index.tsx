@@ -1,4 +1,5 @@
 import * as React from 'react'
+import c from 'classnames'
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 
@@ -28,7 +29,7 @@ const Membership: FunctionComponent<RouteProps> = () => {
   
   return(
     <div className='animated fadeIn'>
-      <section id='hero' className={styles.hero}>
+      <section id='hero' className={c(styles.hero, 'animated pulse')}>
         <div className={hero.bg}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>
