@@ -26,7 +26,7 @@ const Plan: FunctionComponent<PlanType> = props => {
 
   return (
     <div className='mx-8 rounded-lg shadow-lg'>
-      <h3 className={`bg-${color} p-5 text-center text-3xl rounded-t-lg text-${price.color}`}>
+      <h3 className={`bg-${color} p-5 text-center font-semibold text-3xl rounded-t-lg text-${price.color}`}>
         <p className='my-1'>{price.value}</p>
         <Explain text={price.explain} />
       </h3>
