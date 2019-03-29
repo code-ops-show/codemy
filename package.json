@@ -1,6 +1,6 @@
 {
   "name": "codemy",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Codemy Web Site",
   "main": "dist/index.html",
   "repository": "https://www.github.com/codemy/codemy",
