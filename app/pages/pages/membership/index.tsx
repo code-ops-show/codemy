@@ -55,8 +55,8 @@ const Membership: FunctionComponent<RouteProps> = () => {
         <div className='container mx-auto'>
           <h2 className='text-center text-4xl font-normal'>{t('pages.membership.faqs.heading')}</h2>
           <div className='flex content-start flex-wrap items-stretch'>
-            {faqs.map(faq => 
-              <div className='w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2'>
+            {faqs.map((faq, index) => 
+              <div key={`faq_${index}`} className='w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2'>
                 <div className='m-10'>
                   <h3 className='text-2xl font-light mb-10'>{faq.question}</h3>
                   <p className='leading-normal text-lg text-grey-dark'>
