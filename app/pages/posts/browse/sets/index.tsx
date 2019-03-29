@@ -6,10 +6,10 @@ import Loader from '~/components/loader'
 
 import { Set } from './set'
 
-const url: string = 'https://www.codemy.net/v1/sets'
+import api from '~/api'
 
 const getSets = async (dispatch: Dispatch<Array<SetProps>>) => {
-  const response = await fetch(url)
+  const response = await fetch(api('studio', 'v1.sets'))
   const json = await response.json()
 
   dispatch(json.data)

@@ -24,6 +24,7 @@
     "react-helmet": "^5.2.0",
     "react-i18next": "^10.5.2",
     "react-router5": "^7.1.0",
+    "route-node": "^3.4.2",
     "router5": "^7.0.2",
     "router5-helpers": "^7.0.1",
     "router5-plugin-browser": "^7.0.2",

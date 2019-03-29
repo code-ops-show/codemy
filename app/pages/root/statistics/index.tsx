@@ -5,16 +5,16 @@ import Loader from '~/components/loader'
 
 import Duration from './duration'
 
-import MemberButton from '../member_button'  
+import MemberButton from '../member_button' 
 
-const url: string = 'https://www.codemy.net/v1/statistics'
+import api from '~/api'
 
 type TotalDuration = {
   [key: string]: number
 }
 
 const getStats = async (dispatch: Dispatch<TotalDuration>) => {
-  const response = await fetch(url)
+  const response = await fetch(api('studio', 'v1.statistics'))
   const body = await response.json()
 
   dispatch(body.data.total_duration)

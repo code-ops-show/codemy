@@ -1,0 +1,11 @@
+[context.production]
+  environment = { 
+    ENDPOINT: 'https://www.codemy.net'
+  }
+
+# change as needed this is shown here 
+# so we know we can have different endpoint for staging
+[context.develop]
+  environment = {
+    ENDPOINT: 'https://www.codemy.net'
+  }
