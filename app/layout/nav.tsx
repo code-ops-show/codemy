@@ -20,29 +20,31 @@ const PageLinks: FunctionComponent = () => {
     <div className='w-full block flex flex-grow lg:flex lg:items-center lg:w-auto'>
       <div className='text-lg lg:flex-grow'>
         <Link
-          routeName='root'
+          routeName='posts'
           activeClassName={styles.active}
-          className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+          className={c(styles.link, 'mr-8 hover:text-teal-lighter')}
         >
-          {t('application.nav.home')}
+          {t('application.nav.library')}
         </Link>
-        <a
-          href='#'
-          className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+        <Link
+          routeName='conversations'
+          activeClassName={styles.active}
+          className={c(styles.link, 'mr-8 hover:text-teal-lighter')}
         >
-          {t('application.nav.videos')}
-        </a>
+          {t('application.nav.community')}
+        </Link>
         <Link routeName='pages.membership' 
               activeClassName={styles.active} 
-              className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
+              className={c(styles.link, 'mr-8 hover:text-teal-lighter')}>
           {t('application.nav.membership')}
         </Link>
-        <a
-          href='#'
-          className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
+        <Link
+          routeName='pages.about'
+          activeClassName={styles.active}
+          className={c(styles.link, 'mr-8 hover:text-teal-lighter')}
         >
           {t('application.nav.about')}
-        </a>
+        </Link>
       </div>
       <div className='text-lg'>
         <Link
@@ -77,7 +79,13 @@ const Nav: FunctionComponent = () => {
     <nav className={c('flex items-center justify-between flex-wrap pt-10', { ['pb-20']: !auth, ['pb-10']: auth })}>
       <div className={c('container mx-auto z-10', { flex: !auth })}>
         <div className={logoClass}>
-          <img src={logo} width={54} height={54} alt='Codemy Logo' />
+          <Link
+            routeName='root'
+            activeClassName={styles.active}
+            className={c(styles.link, 'hover:text-teal-lighter')}
+          >
+            <img src={logo} width={54} height={54} alt='Codemy Logo' />
+          </Link>
         </div>
         <PageLinks />
       </div>

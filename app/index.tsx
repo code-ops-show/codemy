@@ -7,7 +7,6 @@ import createRouter from './router'
 
 import './i18n'
 import 'typeface-open-sans'
-
 import { Application } from './layout'
 
 const router = createRouter({

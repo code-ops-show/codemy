@@ -1,0 +1,10 @@
+{
+  "heading": "Content Library",
+  "subtext": "Browse or search for a specifc piece of content",
+  "search": {
+    "placeholder": "Examples: Rails, Ruby, React, Elixir, Git"
+  },
+  "sets": {
+    "last_updated": "Last Updated:"
+  }
+}

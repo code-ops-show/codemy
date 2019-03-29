@@ -21,8 +21,10 @@ const Default: FunctionComponent = () => {
         <div className='flex-no-shrink z-10 mt-10 ml-5 mr-20 mb-10'>
           <img src={logo} width={64} />
         </div>
-        {criteria.map((criterion, index) => 
-          <Criterion key={`footer_criterion_${index}`} {...criterion} />)}
+        <div className='flex w-full flex-wrap items-stretch'>
+          {criteria.map((criterion, index) => 
+            <Criterion key={`footer_criterion_${index}`} {...criterion} />)}
+        </div>
       </div>
       <div className={c(styles.legal, 'container mx-auto mt-5 text-center')}>
         <p className='mx-5 text-sm'>

@@ -3,7 +3,8 @@
   "description": "Learn to code by watching our 'Code Along' video series that show you how to build projects side-by-side someone with real world experience.",
   "nav": {
     "home": "Home",
-    "videos": "Videos",
+    "library": "Library",
+    "community": "Community",
     "membership": "Membership",
     "about": "About",
     "login": "Login",
@@ -23,7 +24,7 @@
     "default": {
       "criteria": [
         {
-          "name": "Front-end Development",
+          "name": "Front-end",
           "platforms": [
             {
               "name": "React",
@@ -35,7 +36,7 @@
           ]
         },
         {
-          "name": "Back-end Development",
+          "name": "Back-end",
           "platforms": [
             {
               "name": "Ruby",
@@ -59,12 +60,24 @@
           ]
         },
         {
-          "name": "Development Tooling",
+          "name": "Deployment",
           "platforms": [
             {
-              "name": "macOS",
+              "name": "Automated",
               "sets": [
-                "macOS Environment Setup"
+                "Netlify",
+                "Heroku"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Tooling",
+          "platforms": [
+            {
+              "name": "Setup",
+              "sets": [
+                "macOS Environment"
               ]
             }
           ]

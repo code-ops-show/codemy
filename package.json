@@ -1,6 +1,6 @@
 {
   "name": "codemy",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Codemy Web Site",
   "main": "dist/index.html",
   "repository": "https://www.github.com/codemy/codemy",
@@ -24,6 +24,7 @@
     "react-helmet": "^5.2.0",
     "react-i18next": "^10.5.2",
     "react-router5": "^7.1.0",
+    "route-node": "^3.4.2",
     "router5": "^7.0.2",
     "router5-helpers": "^7.0.1",
     "router5-plugin-browser": "^7.0.2",
@@ -31,7 +32,8 @@
     "router5-plugin-logger": "^7.0.2",
     "svg-loaders": "^0.2.0",
     "tailwind": "^4.0.0",
-    "typeface-open-sans": "^0.0.54"
+    "typeface-open-sans": "^0.0.54",
+    "typeface-source-sans-pro": "^0.0.54"
   },
   "devDependencies": {
     "@babel/core": "7.3.4",
@@ -61,7 +63,7 @@
   },
   "compress": {
     "test": ".",
-    "gzip": {   
+    "gzip": {
       "enabled": true
     },
     "brotli": {

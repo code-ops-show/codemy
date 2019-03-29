@@ -12,6 +12,8 @@ const pages: LazyPagesIndex = {
   root: lazy(() => import('./root')),
   auth: lazy(() => import('./auth')),
   pages: lazy(() => import('./pages')),
+  posts: lazy(() => import('./posts')),
+  conversations: lazy(() => import('./conversations')),
   not_found: lazy(() => import('./not_found'))
 }
 
@@ -38,7 +40,5 @@ const PageComponent: FunctionComponent<RouteProps> = (props: {
 export default (props: { route: State }) => {
   const { route } = useRouteNode('')
   
-  return (
-    <PageComponent route={route} {...props} />
-  )
+  return <PageComponent route={route} {...props} />
 }
