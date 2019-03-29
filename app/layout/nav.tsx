@@ -26,23 +26,25 @@ const PageLinks: FunctionComponent = () => {
         >
           {t('application.nav.home')}
         </Link>
-        <a
-          href='#'
+        <Link
+          routeName='posts'
+          activeClassName={styles.active}
           className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
         >
           {t('application.nav.videos')}
-        </a>
+        </Link>
         <Link routeName='pages.membership' 
               activeClassName={styles.active} 
               className={c(styles.link, 'mr-10 hover:text-teal-lighter')}>
           {t('application.nav.membership')}
         </Link>
-        <a
-          href='#'
+        <Link
+          routeName='pages.about'
+          activeClassName={styles.active}
           className={c(styles.link, 'mr-10 hover:text-teal-lighter')}
         >
           {t('application.nav.about')}
-        </a>
+        </Link>
       </div>
       <div className='text-lg'>
         <Link

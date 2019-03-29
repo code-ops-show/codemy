@@ -21,7 +21,7 @@ const getStats = async (dispatch: Dispatch<TotalDuration>) => {
 }
 
 const Statistics: FunctionComponent = () => {
-  const [total_duration, setTotalDuration] = useState<TotalDuration>({
+  const [totalDuration, setTotalDuration] = useState<TotalDuration>({
     member: 0,
     public: 0,
     registered: 0
@@ -29,12 +29,12 @@ const Statistics: FunctionComponent = () => {
 
   useEffect(() => { getStats(setTotalDuration) }, [])
 
-  if (total_duration.public === 0) return <Loader />
+  if (totalDuration.public === 0) return <Loader />
 
   return (
     <div className='ml-5 mr-5 sm:mr-5 md:mr-10 lg:mr-10 xl:mr-10'>
-      {Object.keys(total_duration).map(key => 
-        <Duration key={`duration_${key}`} id={key} duration={total_duration[key]} />
+      {Object.keys(totalDuration).map(key => 
+        <Duration key={`duration_${key}`} id={key} duration={totalDuration[key]} />
       )}
 
       <MemberButton />

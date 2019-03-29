@@ -1,7 +1,7 @@
 import { FunctionComponent, LazyExoticComponent } from 'react'
 import { RouteProps } from './route'
 
-export interface PageIndex {
+export interface PagesIndex {
   [key: string]: FunctionComponent<RouteProps>
 }
 

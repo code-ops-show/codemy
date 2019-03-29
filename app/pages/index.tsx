@@ -12,6 +12,7 @@ const pages: LazyPagesIndex = {
   root: lazy(() => import('./root')),
   auth: lazy(() => import('./auth')),
   pages: lazy(() => import('./pages')),
+  posts: lazy(() => import('./posts')),
   not_found: lazy(() => import('./not_found'))
 }
 

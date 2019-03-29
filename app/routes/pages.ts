@@ -4,6 +4,7 @@ export default {
   children: [ 
     { name: 'membership', path: '/membership' },
     { name: 'terms', path: '/terms-and-conditions' },
-    { name: 'privacy', path: '/privacy' }
+    { name: 'privacy', path: '/privacy' },
+    { name: 'about', path: '/about' }
   ]
 }
