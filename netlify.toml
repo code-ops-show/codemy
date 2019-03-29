@@ -3,11 +3,14 @@
   publish = 'dist'
 
 [context.production]
-  [context.production.environment]
+  environment = { 
     STUDIO = 'https://www.codemy.net'
+  }
 
 # change as needed this is shown here 
 # so we know we can have different endpoints for staging
 [context.develop]
-  [context.develop.environment]
+  environment = {
     STUDIO = 'https://www.codemy.net'
+  }
+  
