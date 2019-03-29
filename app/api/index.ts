@@ -2,10 +2,15 @@ import studio from './studio'
 import RouteNode from 'route-node'
 
 type EndpointListType = {
-  [key: string]: RouteNode
+  [key: string]: {
+    endpoint: any,
+    routes: RouteNode 
+  }
 }
 
-const endpoints: EndpointListType = { studio }
+const endpoints: EndpointListType = { 
+  studio: { endpoint: process.env.STUDIO, routes: studio }
+}
 
 const api: Function = (
   name: string,
@@ -13,11 +18,13 @@ const api: Function = (
   params?: Object,
   options?: Object
 ): string => {
+
   const api = endpoints[name]
+  const { endpoint, routes } = api
 
   return [
-    process.env.ENDPOINT, 
-    api.buildPath(path, params, options)
+    endpoint, 
+    routes.buildPath(path, params, options)
   ].join('')
 }
 
