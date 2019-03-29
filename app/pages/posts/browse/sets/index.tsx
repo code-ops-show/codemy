@@ -23,7 +23,7 @@ const Sets: FunctionComponent = () => {
   if (sets.length === 0) return <Loader />
 
   return (
-    <div className='flex flex-wrap items-stretch'>
+    <div className='flex flex-wrap items-stretch mx-2'>
       {sets.map(set => <Set {...set} />)}
     </div>
   )

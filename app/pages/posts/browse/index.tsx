@@ -17,7 +17,8 @@ const Browse: FunctionComponent = () => {
         <div className={hero.bg}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
           <div className='flex-1 mx-5 mb-6'>
-            <h1 className='mb-10 font-thin antialiased text-5xl text-center'>{t('posts.browse.heading')}</h1>
+            <h1 className='mb-5 font-thin antialiased text-5xl text-center'>{t('posts.browse.heading')}</h1>
+            <p className='text-center mb-5'>{t('posts.browse.subtext')}</p>
             <div className='mx-auto'>
               <form className='mx-auto max-w-md'>
                 <input type='search' name='search' className='rounded p-5 w-full block focus:outline-none' placeholder={t('posts.browse.search.placeholder')} />

@@ -24,7 +24,7 @@ const PageLinks: FunctionComponent = () => {
           activeClassName={styles.active}
           className={c(styles.link, 'mr-8 hover:text-teal-lighter')}
         >
-          {t('application.nav.videos')}
+          {t('application.nav.library')}
         </Link>
         <Link
           routeName='conversations'

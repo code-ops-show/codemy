@@ -14,13 +14,13 @@ const Set: FunctionComponent<SetProps> = props => {
 
   return(
     <div className='w-full block sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/3'>
-      <div className='bg-white rounded m-3 p-5 shadow-lg'>
+      <div className='bg-white rounded m-3 p-5 shadow-md'>
         <div className='flex'>
           <div className='flex-none text-center w-16 h-16 mr-5 rounded shadow-inner' style={{ backgroundColor: color }}>
             <img src={imageUrl} className='p-1' />
           </div>
           <div className='flex-grow my-2'>
-            <h3 className='font-normal mb-3'>{name}</h3>
+            <h3 className='font-normal text-lg mb-3'>{name}</h3>
             <p className='text-sm text-grey-dark'><span>{t('posts.browse.sets.last_updated')}</span> {updated_at_ago}</p>
           </div>
         </div>
