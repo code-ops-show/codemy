@@ -35,10 +35,8 @@ const Browse: FunctionComponent = () => {
         </div>
       </section>
       <section id='posts' className='bg-white pb-20'>
-        <div className='container mx-auto'>
           <h2 className='text-center text-4xl font-thin mb-10'>{t('posts.browse.posts_section.heading')}</h2>
           <Posts />
-        </div>
       </section>
     </div>
   )
