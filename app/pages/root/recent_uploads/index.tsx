@@ -9,25 +9,12 @@ import MemberButton from '../member_button'
 
 import Post from './post'
 
-import api from '~/api'
-
-const getPosts = async (dispatch: Dispatch<Array<PostProps>>) => {
-  const response = await fetch(
-    api('studio', 'v1.posts.search.page', { page: 1 })
-  )
-  const json = await response.json()
-
-  dispatch(json.data)
-}
+import { usePosts } from '~/api/hooks'
 
 const RecentUploads: FunctionComponent = () => {
-  const [posts, setPosts] = useState<Array<PostProps>>([])
+  const {loading, posts } = usePosts('studio', 'v1.posts.search.page', { page: 1 })
 
-  useEffect(() => {
-    getPosts(setPosts)
-  }, [])
-
-  if (posts.length === 0) return <Loader />
+  if (loading) return <Loader />
 
   return (
     <div className='container mx-auto mt-20'>

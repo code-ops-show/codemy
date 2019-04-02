@@ -4,6 +4,7 @@ import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import Sets from './sets'
+import Posts from './posts'
 
 import * as styles from './index.sass'
 import * as hero from '~/styles/hero.sass'
@@ -33,8 +34,11 @@ const Browse: FunctionComponent = () => {
           <Sets />
         </div>
       </section>
-      <section id='posts'>
-        
+      <section id='posts' className='bg-white pb-20'>
+        <div className='container mx-auto'>
+          <h2 className='text-center text-4xl font-thin mb-10'>{t('posts.browse.posts_section.heading')}</h2>
+          <Posts />
+        </div>
       </section>
     </div>
   )

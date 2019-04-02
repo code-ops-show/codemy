@@ -6,5 +6,8 @@
   },
   "sets": {
     "last_updated": "Last Updated:"
+  },
+  "posts_section": {
+    "heading": "Browse Posts"
   }
 }

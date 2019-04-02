@@ -1,11 +1,11 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
-import { SetProps } from 'typings/set'
+import { SetType } from '~/api/studio/v1/typings'
 import { useTranslation } from 'react-i18next'
 
 import imaging from '~/helpers/imaging'
 
-const Set: FunctionComponent<SetProps> = props => {
+const Set: FunctionComponent<SetType> = props => {
   const { t } = useTranslation('pages')
 
   const { color, name, updated_at_ago, icon_url } = props
