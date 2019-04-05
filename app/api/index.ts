@@ -12,6 +12,15 @@ type EndpointListType = {
   [key: string]: EndpointType
 }
 
+interface CollectionResponse<D, M> {
+  data: D[],
+  meta?: M
+}
+
+interface SingletonResponse<D> {
+  data: D
+}
+
 const endpoints: EndpointListType = {
   studio: { endpoint: process.env.STUDIO, routes: studio }
 }
@@ -28,17 +37,18 @@ function api(
 }
 
 async function get(
-  setLoading: Dispatch<boolean>,
-  setResponse: Dispatch<any[] | any>,
+  beforeStart: Function,
+  afterFinish: Function,
   name: string,
   path: string,
   params?: Object
 ): Promise<any> {
+  beforeStart()
+
   const response = await fetch(api(name, path, params))
   const json = await response.json()
 
-  setResponse(json.data)
-  setLoading(false)
+  afterFinish(json)
 }
 
-export { get }
+export { get, CollectionResponse, SingletonResponse }

@@ -8,6 +8,8 @@
     "last_updated": "Last Updated:"
   },
   "posts_section": {
-    "heading": "Browse Posts"
+    "heading": "Browse Posts",
+    "previous": "Previous",
+    "next": "Next"
   }
 }

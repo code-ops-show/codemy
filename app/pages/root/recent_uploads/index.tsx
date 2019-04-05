@@ -12,7 +12,7 @@ import Post from './post'
 import { usePosts } from '~/api/hooks'
 
 const RecentUploads: FunctionComponent = () => {
-  const {loading, posts } = usePosts('studio', 'v1.posts.search.page', { page: 1 })
+  const { loading, posts } = usePosts('studio', 'v1.posts.search.page')
 
   if (loading) return <Loader />
 

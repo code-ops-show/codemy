@@ -13,7 +13,7 @@ const Sets: FunctionComponent = () => {
 
   return (
     <div className='flex flex-wrap items-stretch mx-2'>
-      {sets.map(set => <Set {...set} />)}
+      {sets.map((set, index) => <Set key={`posts_browse_sets_${index}`} {...set} />)}
     </div>
   )
 }
