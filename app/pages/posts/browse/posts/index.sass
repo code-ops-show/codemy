@@ -1,5 +1,8 @@
 .pagination
-  button
-    @apply mr-3 rounded-full p-3 border font-light w-12 h-12
+  @apply flex
+  a
+    @apply mr-3 text-center no-underline text-black block rounded-full p-3 border w-12 h-12
     &:last-child
       @apply mr-5
+    &.active 
+      @apply bg-teal text-white

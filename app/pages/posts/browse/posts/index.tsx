@@ -2,6 +2,7 @@ import * as React from 'react'
 import c from 'classnames'
 import { FunctionComponent, MouseEvent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router5'
 
 import Loader from '~/components/loader'
 
@@ -49,8 +50,8 @@ const Posts: FunctionComponent = () => {
         >
           <i className='fas fa-arrow-circle-left fa-2x'></i>
         </button>
-        <div className={styles.pagination}>{pages.map(page => 
-          <button>{page + 1}</button>)}
+        <div className={styles.pagination}>{pages.map(p => 
+          <Link routeName='posts.page' routeParams={{ page: p + 1 }}>{p + 1}</Link>)}
         </div>
         <button onClick={nextPage} className='p-2 text-white bg-teal rounded-full'>
           <i className='fas fa-arrow-circle-right fa-2x'></i>

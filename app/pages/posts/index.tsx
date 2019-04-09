@@ -7,6 +7,7 @@ import Loader from '~/components/loader'
 
 const pages: LazyPagesIndex = {
   'posts': lazy(() => import('./browse')),
+  'posts.page': lazy(() => import('./browse')),
   'posts.show': lazy(() => import('./show'))
 }
 
