@@ -7,10 +7,12 @@ import Loader from '~/components/loader'
 
 import { usePosts } from '~/api/hooks'
 
+import * as styles from './index.sass'
+
 import Post from './post'
 
 const Posts: FunctionComponent = () => {
-  const { loading, posts, page, setPage } = usePosts(
+  const { loading, posts, page, setPage, totalPages } = usePosts(
     'studio',
     'v1.posts.search.page'
   )
@@ -29,6 +31,8 @@ const Posts: FunctionComponent = () => {
 
   if (loading) return <Loader />
 
+  const pages = [...Array(totalPages).keys()]
+
   return (
     <>
       <div className='flex flex-wrap mx-2'>
@@ -36,7 +40,7 @@ const Posts: FunctionComponent = () => {
           <Post key={`posts_browse_posts_${index}`} {...post} />
         ))}
       </div>
-      <div className='text-center my-10'>
+      <div className='flex justify-center my-10'>
         <button
           onClick={prevPage}
           className={c('p-2 text-white bg-teal rounded-full mr-5', {
@@ -45,6 +49,9 @@ const Posts: FunctionComponent = () => {
         >
           <i className='fas fa-arrow-circle-left fa-2x'></i>
         </button>
+        <div className={styles.pagination}>{pages.map(page => 
+          <button>{page + 1}</button>)}
+        </div>
         <button onClick={nextPage} className='p-2 text-white bg-teal rounded-full'>
           <i className='fas fa-arrow-circle-right fa-2x'></i>
         </button>

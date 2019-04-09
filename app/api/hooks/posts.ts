@@ -28,7 +28,7 @@ function usePosts(name: string, path: string, params?: Object) {
     get(beforeStart, onCollectionLoad, name, path, { page: page, ...params })
   }, [page])
 
-  return { loading, posts, page, setPage }
+  return { loading, posts, page, setPage, totalPages }
 }
 
 export default usePosts
