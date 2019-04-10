@@ -16,11 +16,11 @@ const pages: PagesIndex = {
 }
 
 const Pages: FunctionComponent = () => {
-  const { route } = useRouteNode('pages')
+  const { route, router } = useRouteNode('pages')
 
   const SubPage = pages[route.name]
 
-  return <SubPage route={route} />
+  return <SubPage route={route} router={router} />
 }
 
 export default Pages
