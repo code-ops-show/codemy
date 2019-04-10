@@ -12,13 +12,13 @@ const pages: LazyPagesIndex = {
 }
 
 const Pages: FunctionComponent = () => {
-  const { route } = useRouteNode('posts')
+  const { route, router } = useRouteNode('posts')
 
   const SubPage = pages[route.name]
 
   return (
     <Suspense fallback={<Loader />}>
-      <SubPage route={route} />
+      <SubPage route={route} router={router} />
     </Suspense>
   )
 }

@@ -1,8 +1,8 @@
 import * as React from 'react'
 import c from 'classnames'
-import { FunctionComponent, MouseEvent } from 'react'
+import { FunctionComponent, MouseEvent, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router5'
+import { Link, useRoute } from 'react-router5'
 
 import Loader from '~/components/loader'
 
@@ -13,21 +13,36 @@ import * as styles from './index.sass'
 import Post from './post'
 
 const Posts: FunctionComponent = () => {
+  const { route, router } = useRoute()
+
   const { loading, posts, page, setPage, totalPages } = usePosts(
     'studio',
-    'v1.posts.search.page'
+    'v1.posts.search.page',
+    { page: parseInt(route.params.page) }
   )
+
+  useEffect(() => {
+    setPage(parseInt(route.params.page))
+  }, [route])
+
   const { t } = useTranslation('pages')
 
   function nextPage(e: MouseEvent): void {
     e.preventDefault()
-    setPage(page + 1)
+
+    const newPage: number = page + 1
+
+    router.navigate('posts.page', { page: newPage.toString() })
+    setPage(newPage)
   }
 
   function prevPage(e: MouseEvent): void {
     e.preventDefault()
 
-    if (page !== 1) setPage(page - 1)
+    const newPage: number = page - 1
+
+    router.navigate('posts.page', { page: newPage.toString() })
+    if (newPage !== 1) setPage(newPage)
   }
 
   if (loading) return <Loader />
@@ -51,9 +66,15 @@ const Posts: FunctionComponent = () => {
           <i className='fas fa-arrow-circle-left fa-2x'></i>
         </button>
         <div className={styles.pagination}>{pages.map(p => 
-          <Link routeName='posts.page' routeParams={{ page: p + 1 }}>{p + 1}</Link>)}
+          <Link 
+            key={`page_link_${p + 1}`}
+            routeName='posts.page'
+            activeClassName={styles.active}
+            routeParams={{ page: (p + 1).toString() }}>{p + 1}</Link>)}
         </div>
-        <button onClick={nextPage} className='p-2 text-white bg-teal rounded-full'>
+        <button onClick={nextPage} className={c('p-2 text-white bg-teal rounded-full', {
+            ['opacity-50 cursor-not-allowed']: page === totalPages
+          })}>
           <i className='fas fa-arrow-circle-right fa-2x'></i>
         </button>
       </div>

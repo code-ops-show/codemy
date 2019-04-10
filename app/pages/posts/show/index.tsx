@@ -4,7 +4,7 @@ import { FunctionComponent } from 'react'
 const Show: FunctionComponent = () => {
   return (
     <div>
-
+      
     </div>
   )
 }

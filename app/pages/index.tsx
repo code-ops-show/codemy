@@ -38,7 +38,7 @@ const PageComponent: FunctionComponent<RouteProps> = (props: {
 }
 
 export default (props: { route: State }) => {
-  const { route } = useRouteNode('')
+  const { route, router } = useRouteNode('')
   
-  return <PageComponent route={route} {...props} />
+  return <PageComponent route={route} router={router} {...props} />
 }

@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
 import { useTranslation } from 'react-i18next'
+import { RouteProps } from 'typings/route'
 
 import Sets from './sets'
 import Posts from './posts'
@@ -8,7 +9,9 @@ import Posts from './posts'
 import * as styles from './index.sass'
 import * as hero from '~/styles/hero.sass'
 
-const Browse: FunctionComponent = () => {
+const Browse: FunctionComponent<RouteProps> = props => {
+  const { route, router } = props
+  
   const { t } = useTranslation('pages')
 
   return (

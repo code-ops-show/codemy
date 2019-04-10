@@ -1,5 +1,6 @@
-import { State } from "router5"
+import { State, Router } from "router5"
 
 export interface RouteProps {
-  route: State
+  route: State,
+  router: Router
 }

@@ -5,11 +5,15 @@ import { get, CollectionResponse, SingletonResponse } from '~/api'
 type PostsResponse = CollectionResponse<PostType, { total_pages: number }>
 type PostResponse = SingletonResponse<PostType>
 
-function usePosts(name: string, path: string, params?: Object) {
+type PageParamsType = {
+  page: number
+}
+
+function usePosts(name: string, path: string, params?: PageParamsType) {
   const [loading, setLoading] = useState<boolean>(false)
   const [post, setPost] = useState<PostType>()
   const [posts, setPosts] = useState<PostType[]>([])
-  const [page, setPage] = useState<number>(1)
+  const [page, setPage] = useState<number>(params && params.page ? params.page : 1)
   const [totalPages, setTotalPages] = useState<number>(1)
 
   function beforeStart() {
