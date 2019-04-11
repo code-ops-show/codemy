@@ -70,7 +70,7 @@ const Posts: FunctionComponent = () => {
       <div className='flex flex-wrap mx-2'>
         <PostCollection posts={posts} loading={loading} />
       </div>
-      <div className='flex justify-center my-10'>
+      <div className='flex flex-wrap justify-center my-10'>
         <button
           onClick={prevPage}
           className={c('p-2 text-white bg-teal rounded-full mr-5', {
