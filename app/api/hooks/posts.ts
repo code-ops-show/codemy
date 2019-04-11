@@ -28,6 +28,12 @@ function usePosts(name: string, path: string, params?: PageParamsType) {
     setLoading(false)
   }
 
+  function onItemLoad(json: PostResponse) {
+    setPost(json.data)
+
+    setLoading(false)
+  }
+
   useEffect(() => {
     get(beforeStart, onCollectionLoad, name, path, { page: page, ...params })
   }, [page])

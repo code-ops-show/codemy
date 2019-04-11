@@ -7,10 +7,30 @@ import { Link, useRoute } from 'react-router5'
 import Loader from '~/components/loader'
 
 import { usePosts } from '~/api/hooks'
+import { PostType } from '~/api/studio/v1/typings'
 
 import * as styles from './index.sass'
 
 import Post from './post'
+
+type PostCollectionProps = {
+  posts: PostType[],
+  loading: boolean
+}
+
+const PostCollection: FunctionComponent<PostCollectionProps> = props => {
+  const { posts, loading } = props
+
+  if (loading) return <Loader />
+
+  return (
+    <>
+      {posts.map((post, index) => (
+        <Post key={`posts_browse_posts_${index}`} {...post} />
+      ))}
+    </>
+  )
+}
 
 const Posts: FunctionComponent = () => {
   const { route, router } = useRoute()
@@ -33,7 +53,6 @@ const Posts: FunctionComponent = () => {
     const newPage: number = page + 1
 
     router.navigate('posts.page', { page: newPage.toString() })
-    setPage(newPage)
   }
 
   function prevPage(e: MouseEvent): void {
@@ -42,19 +61,14 @@ const Posts: FunctionComponent = () => {
     const newPage: number = page - 1
 
     router.navigate('posts.page', { page: newPage.toString() })
-    if (newPage !== 1) setPage(newPage)
   }
-
-  if (loading) return <Loader />
 
   const pages = [...Array(totalPages).keys()]
 
   return (
     <>
       <div className='flex flex-wrap mx-2'>
-        {posts.map((post, index) => (
-          <Post key={`posts_browse_posts_${index}`} {...post} />
-        ))}
+        <PostCollection posts={posts} loading={loading} />
       </div>
       <div className='flex justify-center my-10'>
         <button
