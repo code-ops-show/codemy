@@ -18,10 +18,13 @@
     "classnames": "^2.2.6",
     "dayjs": "^1.8.12",
     "i18next": "^15.0.7",
+    "prism-themes": "^1.1.0",
+    "prismjs": "^1.16.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-helmet": "^5.2.0",
     "react-i18next": "^10.5.2",
+    "react-render-html": "^0.6.0",
     "react-router5": "^7.1.0",
     "route-node": "^3.4.2",
     "router5": "^7.0.2",
@@ -41,6 +44,7 @@
     "@types/react-helmet": "^5.0.8",
     "autoprefixer": "^9.4.10",
     "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-prismjs": "^1.0.2",
     "parcel-bundler": "^1.12.1",
     "parcel-plugin-compress": "^1.0.8",
     "postcss-modules": "^1.4.1",
@@ -53,7 +57,23 @@
   "babel": {
     "plugins": [
       "lodash",
-      "@babel/plugin-transform-runtime"
+      "@babel/plugin-transform-runtime",
+      [
+        "prismjs",
+        {
+          "languages": [
+            "ruby",
+            "bash",
+            "docker",
+            "sass",
+            "jsx",
+            "yaml",
+            "json",
+            "elixir",
+            "coffeescript"
+          ]
+        }
+      ]
     ]
   },
   "compress": {

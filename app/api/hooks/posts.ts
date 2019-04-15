@@ -9,9 +9,35 @@ type PageParamsType = {
   page: number
 }
 
+type PostParamsType = {
+  postId: string
+}
+
+function usePost(name: string, path: string, params: PostParamsType) {
+  const [loading, setLoading] = useState<boolean>(true)
+  const [post, setPost] = useState<PostType>()
+
+  const { postId } = params
+
+  function beforeStart(): void {
+    setLoading(true)
+  }
+
+  function onLoad(json: PostResponse): void {
+    setPost(json.data)
+
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    get(beforeStart, onLoad, name, path, { postId: params.postId })
+  }, [postId])
+
+  return { loading, post }
+}
+
 function usePosts(name: string, path: string, params?: PageParamsType) {
   const [loading, setLoading] = useState<boolean>(false)
-  const [post, setPost] = useState<PostType>()
   const [posts, setPosts] = useState<PostType[]>([])
   const [page, setPage] = useState<number>(params && params.page ? params.page : 1)
   const [totalPages, setTotalPages] = useState<number>(1)
@@ -20,7 +46,7 @@ function usePosts(name: string, path: string, params?: PageParamsType) {
     setLoading(true)
   }
 
-  function onCollectionLoad(json: PostsResponse) {
+  function onLoad(json: PostsResponse) {
     setPosts(json.data)
 
     if (json.meta) setTotalPages(json.meta.total_pages)
@@ -28,17 +54,11 @@ function usePosts(name: string, path: string, params?: PageParamsType) {
     setLoading(false)
   }
 
-  function onItemLoad(json: PostResponse) {
-    setPost(json.data)
-
-    setLoading(false)
-  }
-
   useEffect(() => {
-    get(beforeStart, onCollectionLoad, name, path, { page: page, ...params })
+    get(beforeStart, onLoad, name, path, { page: page, ...params })
   }, [page])
 
   return { loading, posts, page, setPage, totalPages }
 }
 
-export default usePosts
+export { usePosts, usePost }

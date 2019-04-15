@@ -15,3 +15,5 @@ declare module "*.svg" {
 
 declare module 'classnames'
 declare module 'aos'
+declare module 'react-render-html'
+declare module 'prismjs'
