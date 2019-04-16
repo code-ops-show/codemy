@@ -6,7 +6,9 @@ type PostsResponse = CollectionResponse<PostType, { total_pages: number }>
 type PostResponse = SingletonResponse<PostType>
 
 type PageParamsType = {
-  page: number
+  page?: string
+  setId?: string
+  order?: string
 }
 
 type PostParamsType = {
@@ -39,7 +41,7 @@ function usePost(name: string, path: string, params: PostParamsType) {
 function usePosts(name: string, path: string, params?: PageParamsType) {
   const [loading, setLoading] = useState<boolean>(false)
   const [posts, setPosts] = useState<PostType[]>([])
-  const [page, setPage] = useState<number>(params && params.page ? params.page : 1)
+  const [page, setPage] = useState<string>(params && params.page ? params.page : '1')
   const [totalPages, setTotalPages] = useState<number>(1)
 
   function beforeStart() {

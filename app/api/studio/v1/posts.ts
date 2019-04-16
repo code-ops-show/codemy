@@ -6,7 +6,12 @@ export default {
     {
       name: 'search',
       path: '/search',
-      children: [{ name: 'page', path: '/page/:page' }]
+      children: [
+        { name: 'sets', path: '/sets/:setId', children: [
+          { name: 'order', path: '/order/:order' }
+        ] },
+        { name: 'page', path: '/page/:page' }
+      ]
     }
   ]
 }

@@ -38,11 +38,11 @@ const Posts: FunctionComponent = () => {
   const { loading, posts, page, setPage, totalPages } = usePosts(
     'studio',
     'v1.posts.search.page',
-    { page: parseInt(route.params.page) }
+    { page: route.params.page }
   )
 
   useEffect(() => {
-    setPage(parseInt(route.params.page))
+    setPage(route.params.page)
   }, [route])
 
   const { t } = useTranslation('pages')
@@ -50,17 +50,17 @@ const Posts: FunctionComponent = () => {
   function nextPage(e: MouseEvent): void {
     e.preventDefault()
 
-    const newPage: number = page + 1
+    const newPage: string = page + 1
 
-    router.navigate('posts.page', { page: newPage.toString() })
+    router.navigate('posts.page', { page: newPage })
   }
 
   function prevPage(e: MouseEvent): void {
     e.preventDefault()
 
-    const newPage: number = page - 1
+    const newPage: string = (parseInt(page) - 1).toString()
 
-    router.navigate('posts.page', { page: newPage.toString() })
+    router.navigate('posts.page', { page: newPage })
   }
 
   const pages = [...Array(totalPages).keys()]
@@ -74,7 +74,7 @@ const Posts: FunctionComponent = () => {
         <button
           onClick={prevPage}
           className={c('p-2 text-white bg-teal rounded-full mr-5', {
-            ['opacity-50 cursor-not-allowed']: page === 1
+            ['opacity-50 cursor-not-allowed']: page === '1'
           })}
         >
           <i className='fas fa-arrow-circle-left fa-2x'></i>
@@ -87,7 +87,7 @@ const Posts: FunctionComponent = () => {
             routeParams={{ page: (p + 1).toString() }}>{p + 1}</Link>)}
         </div>
         <button onClick={nextPage} className={c('p-2 text-white bg-teal rounded-full', {
-            ['opacity-50 cursor-not-allowed']: page === totalPages
+            ['opacity-50 cursor-not-allowed']: page === totalPages.toString()
           })}>
           <i className='fas fa-arrow-circle-right fa-2x'></i>
         </button>

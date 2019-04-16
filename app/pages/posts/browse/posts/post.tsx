@@ -10,13 +10,13 @@ import imaging from '~/helpers/imaging'
 import * as styles from './post.sass'
 
 const Post: FunctionComponent<PostType> = props => {
-  const { title, cover_picture_url, published_at, slug } = props 
+  const { title, cover_picture_url, published_at, slug, set } = props 
 
   const imageUrl: string | undefined = imaging(cover_picture_url, '960', '540') 
 
   return (
     <div className='w-full block sm:w-full md:w-1/3 lg:w-1/4 xl:w-1/6'>
-      <Link routeName='posts.show' className='no-underline' routeParams={{ postId: slug }}>
+      <Link routeName='posts.show.sets' className='no-underline' routeParams={{ postId: slug, setId: set.slug }}>
         <div className='mx-3 my-3'>
           <div className={styles.placeholder}>
             <img src={imageUrl} className='rounded shadow' />

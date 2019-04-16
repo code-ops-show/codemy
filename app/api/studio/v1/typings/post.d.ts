@@ -6,5 +6,11 @@ export type PostType = {
   duration: number
   cover_picture_url: string
   published_at: Date
-  media: Array<any>
+  media: Array<any>,
+  set: {
+    color: string
+    icon_url: string
+    id: number
+    slug: string
+  }
 }

@@ -1,7 +1,9 @@
 import * as React from 'react'
-import { FunctionComponent, useEffect, useRef } from 'react'
+import { FunctionComponent, useEffect, useRef, MouseEvent } from 'react'
 import { usePost } from '~/api/hooks'
 import { RouteProps } from 'typings/route'
+
+import Playlist from './playlist'
 
 import Loader from '~/components/loader'
 
@@ -21,8 +23,13 @@ const Show: FunctionComponent<RouteProps> = props => {
     { postId: route.params.postId }
   )
 
-  useEffect(() => {
+  function back(e: MouseEvent): void { 
+    e.preventDefault()
 
+    history.back()
+  }
+
+  useEffect(() => {
     if (descriptionRef.current) {
       const codeBlocks = [].slice.call(
         descriptionRef.current.getElementsByTagName('code')
@@ -38,17 +45,19 @@ const Show: FunctionComponent<RouteProps> = props => {
     <div className='animated fadeIn'>
       <section id='hero' className={styles.hero}>
         <div className={hero.bg}></div>
-        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
-          <div className='flex-grow'>
-            <div className='mx-3 shadow-lg rounded'>
+        <div className='flex items-stretch flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row relative container mx-auto text-white z-10 max-h-24'>
+          <div className='w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4'>
+            <div className='mx-3 mb-3 shadow-lg rounded'>
               <div className={styles.medium}></div>
               <div className='bg-white rounded-b'>
-                <h1 className='text-black font-semibold p-5'>{post.title}</h1>
+                <h1 className='text-black font-semibold p-5 text-xl'>{post.title}</h1>
               </div>
             </div>
           </div>
-          <div className='flex-1'>
-            <div className='mx-3'>playlist</div>
+          <div className='w-full sm:w-full md:w-full lg:w-1/4 xl:w-1/4'>
+            <div className='mx-3 sm:mx-3 md:mx-3 lg:mx-1 xl:mx-1 bg-white rounded shadow-lg'>
+              <Playlist type='set' slug={post.set.slug} />
+            </div>
           </div>
         </div>
       </section>
@@ -56,9 +65,6 @@ const Show: FunctionComponent<RouteProps> = props => {
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto'>
           <div className='flex-1' ref={descriptionRef}>
             <div className='mx-3'>{renderHTML(post.description)}</div>
-          </div>
-          <div className='flex-grow'>
-            <div className='mx-3'>stuff</div>
           </div>
         </div>
       </section>

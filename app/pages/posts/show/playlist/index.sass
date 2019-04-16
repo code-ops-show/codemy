@@ -1,0 +1,15 @@
+.playlist
+  @apply overflow-auto block w-full scrolling-touch
+  height: 20rem
+  @screen md
+    height: 23.25rem
+  @screen lg
+    height: 29.25rem
+  @screen xl
+    height: 34.75rem
+  a
+    &:first-child
+      @apply rounded-t
+    &:last-child
+      @apply rounded-b
+    
