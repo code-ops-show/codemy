@@ -39,20 +39,27 @@ const Show: FunctionComponent<RouteProps> = props => {
       <section id='hero' className={styles.hero}>
         <div className={hero.bg}></div>
         <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto text-white z-10'>
-          <div className='flex-1 shadow-lg rounded mx-3'>
-            <div className={styles.medium}></div>
-            <div className='bg-white rounded-b'>
-              <h1 className='text-black font-semibold p-5'>{post.title}</h1>
+          <div className='flex-grow'>
+            <div className='mx-3 shadow-lg rounded'>
+              <div className={styles.medium}></div>
+              <div className='bg-white rounded-b'>
+                <h1 className='text-black font-semibold p-5'>{post.title}</h1>
+              </div>
             </div>
           </div>
-          <div className='flex-shrink'>
-            
+          <div className='flex-1'>
+            <div className='mx-3'>playlist</div>
           </div>
         </div>
       </section>
       <section id='content' className={styles.content}>
-        <div className='container mx-auto z-10' ref={descriptionRef}>
-          <div className='mx-3'>{renderHTML(post.description)}</div>
+        <div className='flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row relative container mx-auto'>
+          <div className='flex-1' ref={descriptionRef}>
+            <div className='mx-3'>{renderHTML(post.description)}</div>
+          </div>
+          <div className='flex-grow'>
+            <div className='mx-3'>stuff</div>
+          </div>
         </div>
       </section>
     </div>

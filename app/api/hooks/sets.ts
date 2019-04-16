@@ -16,13 +16,13 @@ function useSets(
     setLoading(true)
   }
 
-  function onCollectionLoad(json: SetsResponse) {
+  function onLoad(json: SetsResponse) {
     setSets(json.data)
     setLoading(false)
   }
 
   useEffect(() => {
-    get(beforeStart, onCollectionLoad, name, path, params)
+    get(beforeStart, onLoad, name, path, params)
   }, [])
 
   return { loading, sets }
