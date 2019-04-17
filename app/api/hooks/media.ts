@@ -12,6 +12,8 @@ function useMedia(name: string, path: string, params: PostMediaParams) {
   const [loading, setLoading] = useState<boolean>(true)
   const [media, setMedia] = useState<MediumType[]>([])
 
+  const { postId } = params
+
   function beforeStart() {
     setLoading(true)
   }
@@ -24,7 +26,7 @@ function useMedia(name: string, path: string, params: PostMediaParams) {
 
   useEffect(() => {
     get(beforeStart, onLoad, name, path, params)
-  }, [params.postId])
+  }, [postId])
 
   return { loading, media }
 }
