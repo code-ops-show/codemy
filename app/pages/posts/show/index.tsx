@@ -4,6 +4,7 @@ import { usePost } from '~/api/hooks'
 import { RouteProps } from 'typings/route'
 
 import Playlist from './playlist'
+import Media from './media'
 
 import Loader from '~/components/loader'
 
@@ -22,12 +23,6 @@ const Show: FunctionComponent<RouteProps> = props => {
     'v1.posts.show',
     { postId: route.params.postId }
   )
-
-  function back(e: MouseEvent): void { 
-    e.preventDefault()
-
-    history.back()
-  }
 
   useEffect(() => {
     if (descriptionRef.current) {
@@ -48,7 +43,9 @@ const Show: FunctionComponent<RouteProps> = props => {
         <div className='flex items-stretch flex-col sm:flex-col md:flex-col lg:flex-row xl:flex-row relative container mx-auto text-white z-10 max-h-24'>
           <div className='w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4'>
             <div className='mx-3 mb-3 shadow-lg rounded'>
-              <div className={styles.medium}></div>
+              <div className={styles.medium}>
+                <Media />
+              </div>
               <div className='bg-white rounded-b'>
                 <h1 className='text-black font-semibold p-5 text-xl'>{post.title}</h1>
               </div>
