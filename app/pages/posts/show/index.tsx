@@ -3,6 +3,8 @@ import { FunctionComponent, useEffect, useRef, MouseEvent } from 'react'
 import { usePost } from '~/api/hooks'
 import { RouteProps } from 'typings/route'
 
+import imaging from '~/helpers/imaging'
+
 import Playlist from './playlist'
 import Media from './media'
 
@@ -36,6 +38,8 @@ const Show: FunctionComponent<RouteProps> = props => {
 
   if (loading || !post) return <Loader />
 
+  const coverPictureUrl: string | undefined = imaging(post.cover_picture_url, '1280', '720')
+
   return (
     <div className='animated fadeIn'>
       <section id='hero' className={styles.hero}>
@@ -44,7 +48,7 @@ const Show: FunctionComponent<RouteProps> = props => {
           <div className='w-full sm:w-full md:w-full lg:w-3/4 xl:w-3/4'>
             <div className='mx-3 mb-3 shadow-lg rounded'>
               <div className={styles.medium}>
-                <Media />
+                <Media title={post.title} coverPicture={coverPictureUrl} />
               </div>
               <div className='bg-white rounded-b'>
                 <h1 className='text-black font-semibold p-5 text-xl'>{post.title}</h1>

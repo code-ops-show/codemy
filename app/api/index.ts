@@ -1,7 +1,5 @@
-import { Dispatch } from 'react'
 import studio from './studio'
 import RouteNode from 'route-node'
-import { useSets } from './hooks'
 
 type EndpointType = {
   endpoint: any
@@ -51,4 +49,4 @@ async function get(
   afterFinish(json)
 }
 
-export { get, CollectionResponse, SingletonResponse }
+export { api, get, CollectionResponse, SingletonResponse }

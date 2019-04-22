@@ -1,4 +1,4 @@
 export default {
   name: 'tokens',
-  path: '/tokens/:token'
+  path: '/tokens/:vodPlayId'
 }
