@@ -50,7 +50,7 @@ const Posts: FunctionComponent = () => {
   function nextPage(e: MouseEvent): void {
     e.preventDefault()
 
-    const newPage: string = page + 1
+    const newPage: string = (parseInt(page) + 1).toString()
 
     router.navigate('posts.page', { page: newPage })
   }

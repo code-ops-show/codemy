@@ -1,8 +1,16 @@
 .pagination
-  @apply flex
+  @apply hidden
   a
     @apply mr-3 text-center no-underline font-semibold text-teal-dark block rounded-full p-3 border border-teal w-12 h-12
     &:last-child
       @apply mr-5
     &.active 
       @apply bg-teal text-white
+  @screen sm
+    @apply hidden
+  @screen md
+    @apply hidden
+  @screen lg
+    @apply flex
+  @screen xl
+    @apply flex
