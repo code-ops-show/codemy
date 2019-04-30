@@ -70,7 +70,7 @@ const Posts: FunctionComponent = () => {
       <div className='flex flex-wrap mx-2'>
         <PostCollection posts={posts} loading={loading} />
       </div>
-      <div className='flex flex-wrap justify-center my-10'>
+      <div className='flex overflow-auto scrolling-touch my-10 mx-3 p-3'>
         <button
           onClick={prevPage}
           className={c('p-2 text-white bg-teal rounded-full mr-5', {
@@ -79,7 +79,7 @@ const Posts: FunctionComponent = () => {
         >
           <i className='fas fa-arrow-circle-left fa-2x'></i>
         </button>
-        <div className={styles.pagination}>{pages.map(p => 
+        <div className={styles.pages}>{pages.map(p => 
           <Link 
             key={`page_link_${p + 1}`}
             routeName='posts.page'
