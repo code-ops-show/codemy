@@ -34,6 +34,29 @@ function api(
   return [endpoint, routes.buildPath(path, params, options)].join('')
 }
 
+async function post(
+  beforeStart: Function,
+  afterFinish: Function,
+  name: string,
+  path: string,
+  body: Object,
+  params?: Object
+): Promise<any> {
+  beforeStart()
+
+  const response = await fetch(api(name, path, params), {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(body)
+  })
+
+  const json = await response.json()
+
+  afterFinish(json)
+}
+
 async function get(
   beforeStart: Function,
   afterFinish: Function,
@@ -49,4 +72,4 @@ async function get(
   afterFinish(json)
 }
 
-export { api, get, CollectionResponse, SingletonResponse }
+export { api, get, post, CollectionResponse, SingletonResponse }
