@@ -1,8 +1,9 @@
 import * as React from 'react'
 import { FunctionComponent, useRef, useEffect } from 'react'
 import { useRoute } from 'react-router5'
-import { api } from '~/api'
 import { useMedia } from '~/api/hooks'
+
+import api from '~/api'
 
 type MediaProps = {
   title: string

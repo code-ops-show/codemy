@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { FunctionComponent } from 'react'
-import { SetType } from '~/api/studio/v1/typings'
+import { SetType } from '~api/typings/studio/v1'
 import { useTranslation } from 'react-i18next'
 
 import imaging from '~/helpers/imaging'
