@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import { MediumType } from '~/api/studio/v1/typings'
-import { get, CollectionResponse } from '~/api'
+import { MediumType } from '~api/typings/studio/v1'
+
+import { CollectionResponse } from '~api/typings'
+import { get } from '~api/middleware'
 
 type MediaResponse = CollectionResponse<MediumType, {}>
 

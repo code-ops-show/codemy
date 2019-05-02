@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import { StatisticType } from '~/api/studio/v1/typings'
-import { get, SingletonResponse } from '~/api'
+import { StatisticType } from '~api/typings/studio/v1'
+
+import { SingletonResponse } from '~api/typings'
+import { get } from '~api/middleware'
 
 type StatisticResponse = SingletonResponse<StatisticType>
 

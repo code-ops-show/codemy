@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { TokenType } from '~/api/studio/v1/typings/play'
-import { get, SingletonResponse } from '~/api'
+import { TokenType } from '~api/typings/studio/v1/play'
+import { SingletonResponse } from '~/api/typings/studio'
+import { get } from '~/api/middleware'
 
 type TokenResponse = SingletonResponse<TokenType>
 

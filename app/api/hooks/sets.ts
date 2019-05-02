@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import { SetType } from '~/api/studio/v1/typings'
-import { get, CollectionResponse } from '~/api'
+import { SetType } from '~api/typings/studio/v1'
+
+import { CollectionResponse } from '~api/typings'
+import { get } from '~api/middleware'
 
 type SetsResponse = CollectionResponse<SetType, Object>
 

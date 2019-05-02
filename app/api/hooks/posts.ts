@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
-import { PostType } from '~/api/studio/v1/typings'
-import { get, CollectionResponse, SingletonResponse } from '~/api'
+import { PostType } from '~api/typings/studio/v1'
+
+import { CollectionResponse, SingletonResponse } from '~api/typings'
+import { get } from '~api/middleware'
 
 type PostsResponse = CollectionResponse<PostType, { total_pages: number }>
 type PostResponse = SingletonResponse<PostType>

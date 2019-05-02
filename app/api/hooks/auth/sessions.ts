@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import { SessionType } from '~/api/studio/v1/typings/auth'
-import { post, SingletonResponse } from '~/api'
+import { SessionType } from '~api/typings/studio/auth'
+import { SingletonResponse } from '~/api/typings/studio'
+import { post } from '~/api/middleware'
 
 type SessionResponse = SingletonResponse<SessionType>
 
