@@ -3,7 +3,7 @@ import dayjs from 'dayjs'
 import { FunctionComponent } from 'react'
 import { Link } from 'react-router5'
 
-import { PostType } from '~/api/studio/v1/typings'
+import { PostType } from '~api/typings/studio/v1'
 
 import imaging from '~/helpers/imaging'
 

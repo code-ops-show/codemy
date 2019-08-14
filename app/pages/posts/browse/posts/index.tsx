@@ -7,7 +7,7 @@ import { Link, useRoute } from 'react-router5'
 import Loader from '~/components/loader'
 
 import { usePosts } from '~/api/hooks'
-import { PostType } from '~/api/studio/v1/typings'
+import { PostType } from '~api/typings/studio/v1'
 
 import * as styles from './index.sass'
 

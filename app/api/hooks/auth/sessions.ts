@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import { SessionType } from '~api/typings/studio/auth'
 import { SingletonResponse } from '~api/typings'
+import { isSuccess, isError } from '../utils'
+
 import { post } from '~/api/middleware'
 
 type SessionResponse = SingletonResponse<SessionType>
@@ -20,8 +22,10 @@ function useSession(name: string, path: string) {
     setLoading(true)
   }
 
-  function onLoad(json: SessionResponse) {
-    setSession(json.data)
+  function afterFinish({ data }: SessionResponse) {
+    if (isSuccess(data) && body) {
+      setSession(data)
+    }
 
     setLoading(false)
   }
@@ -31,7 +35,7 @@ function useSession(name: string, path: string) {
   }
 
   useEffect(() => {
-    if (body) post(beforeStart, onLoad, name, path, body)
+    if (body) post(beforeStart, afterFinish, name, path, body)
   }, [body])
 
   return { setBody, session, loading }

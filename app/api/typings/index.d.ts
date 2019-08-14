@@ -1,5 +1,5 @@
 interface CollectionResponse<D, M> {
-  data: D[],
+  data: D[]
   meta?: M
 }
 
@@ -7,4 +7,12 @@ interface SingletonResponse<D> {
   data: D
 }
 
-export { CollectionResponse, SingletonResponse }
+type ChangeErrorType = {
+  [key: string]: string | []
+}
+
+type ChangesetErrorType = {
+  errors: ChangeErrorType
+}
+
+export { CollectionResponse, SingletonResponse, ChangesetErrorType }

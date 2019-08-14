@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { TokenType } from '~api/typings/studio/v1/play'
-import { SingletonResponse } from '~/api/typings/studio'
+import { SingletonResponse } from '~api/typings'
 import { get } from '~/api/middleware'
 
 type TokenResponse = SingletonResponse<TokenType>
@@ -19,14 +19,14 @@ function useToken(name: string, path: string, params: TokenParams) {
     setLoading(true)
   }
 
-  function onLoad(json: TokenResponse) {
+  function afterFinish(json: TokenResponse) {
     setToken(json.data.token)
 
     setLoading(false)
   }
 
   useEffect(() => {
-    get(beforeStart, onLoad, name, path, params)
+    get(beforeStart, afterFinish, name, path, params)
   }, [vodPlayId])
 
   return { loading, token }
